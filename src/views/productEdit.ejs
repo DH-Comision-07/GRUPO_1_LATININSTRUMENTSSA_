@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/styleEditCreate.css" />
-    <link rel="stylesheet" href="/css/styleHome.css" />
-</head>
-<body class="body-edit">
-    <%- include ("partials/Header.ejs") %>
-    <main class="main-edit">
-        <article class="container-form">
-            <form class="product-edit" action="/product/edit" method="post">
-                <h2 class="titulo-editando">Editando Artículo</h2>
-                <div class="container-input">
-                    <label class="label-form">
-                        <input type="file" class="form-input-img" accept=".jpg , .png , .JPEG">
-                    </label>
-                </div>
-                <div class="container-input">
-                    <label class="label-form">
-                        <input class="in-nombre" type="text" class="form-input" placeholder="Nombre del producto">
-                    </label>
-                </div>
-                <div class="container-input">
-                    <label class="label-form">
-                        <input class="in-marca" type="text" class="form-input" placeholder="Marca">
-                    </label>
-                </div>
-                <div class="container-input-descripcion">
-                    <!-- <label class="label-form-descripcion"> -->
-                        <textarea class="in-descripcion"> Descripción </textarea>
-                    <!-- </label> -->
-                </div>
-                <div class="container-input">
-                    <label class="label-categoria">
-                        <select class="select-categoria" id="condicionador" name="condicionador">
-                            <option value="">Categoría</option>
-                            <option value="instrumentos">Instrumentos</option>
-                            <option value="accesorios">Accesorios</option>
-                            <option value="vinilos">Vinilos</option>
-                        </select>           
-                    </label>
-                </div>
-                <div class="container-input">
-                    <label>
-                        <input class="in-precio" type="text" class="form-input" placeholder="Precio">
-                    </label>
-                </div>
-                <br />
-                <button class="seguir"><a class="seguir-label" href="/">EDITAR PRODUCTO</a></button>
-            </form>
-        </article>
-    </main>
-</body>
+	<head>
+		<%- include('partials/head.ejs') %>
+		<link rel="stylesheet" href="/css/styleEditCreate.css" />
+		<link rel="stylesheet" href="/css/styleHome.css" />
+	</head>
+	<body class="body-edit">
+		<%- include ("partials/Header.ejs") %>
+		<main class="main-edit">
+			<article class="container-form">
+				<form class="product-edit" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+					<h2 class="titulo-editando">Editar Artículo: <%= product.nombre %></h2>
+					<div class="container-input">
+						<label for="imagen" class="label-form">Imagen</label>
+						<input id="imagen" name="imagen" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" required />
+					</div>
+					<div class="container-input">
+						<label for="nombre" class="label-form">Nombre</label>
+						<input id="nombre" name="nombre" class="in-nombre" type="text" value="<%= product.nombre %>" required />
+					</div>
+					<div class="container-input">
+						<label for="marca" class="label-form">Marca</label>
+						<input id="marca" name="marca" class="in-marca" type="text" class="form-input" value="<%= product.marca %>" required />
+					</div>
+					<div class="container-input">
+						<label for="descripcion" class="label-form">Descripción</label>
+						<textarea name="descripcion" id="descripcion" class="in-descripcion" cols="30" rows="10" required ><%= product.descripcion %></textarea>
+					</div>
+					<div class="container-input">
+						<label for="categoria" class="label-form">Selecciona una categoria:</label>
+						<select class="select-categoria" id="categoria" name="categoria" required >
+							<option value="" disabled>--Elige--</option>
+							<option value="instrumento" <% if (product.categoria === 'instrumento') { %> selected <% } %>>Instrumento</option>
+							<option value="accesorio" <% if (product.categoria === 'accesorio') { %> selected <% } %>>Accesorio</option>
+							<option value="vinilo" <% if (product.categoria === 'vinilo') { %> selected <% } %>>Vinilo</option>
+						</select>
+					</div>
+					<div class="container-input">
+						<label for="precio" class="label-form">Precio</label>
+						<input id="precio" name="precio" class="in-precio" type="number" class="form-input" value="<%= product.precio %>" required />
+					</div>
+					<br />
+					<button type="submit" class="seguir">GUARDAR PRODUCTO</button>
+				</form>
+			</article>
+		</main>
+	</body>
 </html>
