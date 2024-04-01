@@ -44,6 +44,14 @@ const productService = {
 			products[productIndex] = { ...products[productIndex], ...updatedProduct };
       fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");
     }
+  },
+
+  deleteProduct : ()=>{
+    const getoneForDelete = productService.getProductsById();
+    if (getoneForDelete !== -1) {
+      products.pop()
+      fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");
+    }
   }
 }
 

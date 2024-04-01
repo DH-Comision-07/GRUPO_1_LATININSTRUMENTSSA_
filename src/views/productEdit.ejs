@@ -13,7 +13,7 @@
 					<h2 class="titulo-editando">Editar Artículo: <%= product.nombre %></h2>
 					<div class="container-input">
 						<label for="imagen" class="label-form">Imagen</label>
-						<input id="imagen" name="imagen" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" required />
+						<input id="imagen" name="imagen" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
 					</div>
 					<div class="container-input">
 						<label for="nombre" class="label-form">Nombre</label>
@@ -42,7 +42,13 @@
 					</div>
 					<br />
 					<button type="submit" class="seguir">GUARDAR PRODUCTO</button>
+					
 				</form>
+				<form class="product-edit" action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+					<button type="submit" class="seguir">ELIMINAR PRODUCTO</button>
+				</form>
+				
+				
 			</article>
 		</main>
 	</body>

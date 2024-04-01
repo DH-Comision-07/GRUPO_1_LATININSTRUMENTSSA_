@@ -36,25 +36,27 @@ const productsController = {
 			return res.status(404).send("Producto no encontrado");
 		}
 		res.render("productEdit", { product });
-  },
-  
-  Update: (req, res) => {
+},
+
+Update: (req, res) => {
     const productId = req.params.id;
 	console.log(req.body);
     const updatedProduct = {
-      nombre: req.body.nombre,
-      marca: req.body.marca,
-      descripcion: req.body.descripcion,
-      categoria: req.body.categoria,
-      precio: parseInt(req.body.precio),
-      imagen: req.file ? req.file.filename : "",
+    nombre: req.body.nombre,
+    marca: req.body.marca,
+    descripcion: req.body.descripcion,
+    categoria: req.body.categoria,
+    precio: parseInt(req.body.precio),
+    imagen: req.file ? req.file.filename : "",
     };
     productService.updateProduct(productId, updatedProduct);
     res.redirect(`/product/detail/${productId}`);
-  },
-  Delete: (req,res)=> {
-	
-  }
+},
+Delete: (req,res)=> {
+	const productId = req.params.id
+	productService.deleteProduct(productId);
+	res.redirect('/')
+}
 };
 
 module.exports = productsController;
