@@ -1,15 +1,11 @@
 const express = require("express");
-// const bodyParser = require('body-parser');
 const usersRoutes = require("./src/routes/usersRoutes.js");
 const indexRoutes = require("./src/routes/indexRoutes.js");
 const productsRoutes = require("./src/routes/productsRoutes.js");
+
 const methodOverride = require ('method-override');
-
-
 const app = express();
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
