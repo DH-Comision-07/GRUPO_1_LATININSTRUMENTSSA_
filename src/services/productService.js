@@ -36,7 +36,10 @@ const productService = {
 
   updateProduct: (productId, updatedProduct) => {
 		const products = productService.getAllProducts();
+    console.log(updatedProduct);
 		const productIndex = products.findIndex((product) => product.id == productId);
+    console.log("pasa por aca");
+    console.log(productIndex);
 		if (productIndex !== -1) {
 			products[productIndex] = { ...products[productIndex], ...updatedProduct };
       fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");

@@ -142,10 +142,5 @@
     "categoria": "instrumento",
     "precio": 900,
     "imagen": "bajo1.jpg"
-  },
-  {
-    "id": 17,
-    "precio": null,
-    "imagen": ""
   }
 ]

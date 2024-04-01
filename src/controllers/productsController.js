@@ -39,8 +39,8 @@ const productsController = {
   },
   
   Update: (req, res) => {
-    const productId = parseInt(req.params.id);
-    console.log(req.body);
+    const productId = req.params.id;
+	console.log(req.body);
     const updatedProduct = {
       nombre: req.body.nombre,
       marca: req.body.marca,
@@ -51,6 +51,9 @@ const productsController = {
     };
     productService.updateProduct(productId, updatedProduct);
     res.redirect(`/product/detail/${productId}`);
+  },
+  Delete: (req,res)=> {
+	
   }
 };
 
