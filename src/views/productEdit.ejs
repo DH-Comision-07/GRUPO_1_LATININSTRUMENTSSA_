@@ -40,16 +40,15 @@
 						<label for="precio" class="label-form">Precio</label>
 						<input id="precio" name="precio" class="in-precio" type="number" class="form-input" value="<%= product.precio %>" required />
 					</div>
+					<button type="submit" class="seguir btn-guardar">GUARDAR PRODUCTO</button>
 					<br />
-					<button type="submit" class="seguir">GUARDAR PRODUCTO</button>
 					
 				</form>
 				<form class="product-edit" action="/product/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-					<button type="submit" class="seguir">ELIMINAR PRODUCTO</button>
+					<button type="submit" class="seguir btn-delete">ELIMINAR PRODUCTO</button>
 				</form>
-				
-				
 			</article>
 		</main>
 	</body>
+  <%- include ("partials/Footer.ejs") %>
 </html>
