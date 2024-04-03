@@ -12,23 +12,23 @@
 				<form class="product-edit" action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 					<h2 class="titulo-editando">Editar Artículo: <%= product.name %></h2>
 					<div class="container-input">
-						<label for="imagen" class="label-form">Imagen</label>
+						<label for="image" class="label-form">Imagen</label>
 						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
 					</div>
 					<div class="container-input">
-						<label for="nombre" class="label-form">Nombre</label>
+						<label for="name" class="label-form">Nombre</label>
 						<input id="name" name="name" class="in-nombre" type="text" value="<%= product.name %>" required />
 					</div>
 					<div class="container-input">
-						<label for="marca" class="label-form">Marca</label>
+						<label for="brand" class="label-form">Marca</label>
 						<input id="brand" name="brand" class="in-marca" type="text" class="form-input" value="<%= product.brand %>" required />
 					</div>
 					<div class="container-input">
-						<label for="descripcion" class="label-form">Descripción</label>
+						<label for="description" class="label-form">Descripción</label>
 						<textarea name="description" id="description" class="in-descripcion" cols="30" rows="10" required ><%= product.description %></textarea>
 					</div>
 					<div class="container-input">
-						<label for="categoria" class="label-form">Selecciona una categoria:</label>
+						<label for="category" class="label-form">Selecciona una categoria:</label>
 						<select class="select-categoria" id="category" name="category" required >
 							<option value="" disabled>--Elige--</option>
 							<option value="instrumento" <% if (product.category === 'instrumento') { %> selected <% } %>>Instrumento</option>
@@ -38,7 +38,7 @@
 					</div>
 					<div class="container-input">
 						<label for="precio" class="label-form">Precio</label>
-						<input id="price" name="precio" class="in-precio" type="number" class="form-input" value="<%= product.price %>" required />
+						<input id="price" name="price" class="in-precio" type="number" class="form-input" value="<%= product.price %>" required />
 					</div>
 					<br />
 					<button type="submit" class="seguir">GUARDAR PRODUCTO</button>
