@@ -46,12 +46,11 @@ const productService = {
     }
   },
 
-  deleteProduct : ()=>{
-    const getoneForDelete = productService.getProductsById();
-    if (getoneForDelete !== -1) {
-      products.pop()
-      fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");
-    }
+  deleteProduct : (id)=>{
+      const products = productService.getAllProducts();
+      let finalProducts = products.filter(oneProduct => oneProduct.id != id);
+      const productDelete = products.splice(finalProducts, 1)
+        fs.writeFileSync(productsPath, JSON.stringify(finalProducts, null, 2), "utf-8");
   }
 }
 
