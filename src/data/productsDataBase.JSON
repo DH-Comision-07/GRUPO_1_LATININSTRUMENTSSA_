@@ -1,146 +1,146 @@
 [
   {
-    "id": 1,
-    "nombre": "Guitarra eléctrica",
-    "marca": "Fender",
-    "descripcion": "Una guitarra eléctrica de alta calidad para músicos profesionales.",
-    "categoria": "instrumento",
-    "precio": 1500,
-    "imagen": "guitarra1.jpg"
+  "id": 1,
+  "name": "Guitarra eléctrica",
+  "brand": "Fender",
+  "description": "Una guitarra eléctrica de alta calidad para músicos profesionales.",
+  "category": "instrumento",
+  "price": 1500,
+  "image": "guitarra1.jpg"
   },
   {
-    "id": 2,
-    "nombre": "Amplificador",
-    "marca": "Marshall",
-    "descripcion": "Potente amplificador para guitarra eléctrica con un sonido nítido y potente.",
-    "categoria": "accesorio",
-    "precio": 800,
-    "imagen": "amplificador1.jpg"
+  "id": 2,
+  "name": "Amplificador",
+  "brand": "Marshall",
+  "description": "Potente amplificador para guitarra eléctrica con un sonido nítido y potente.",
+  "category": "accesorio",
+  "price": 800,
+  "image": "amplificador1.jpg"
   },
   {
-    "id": 3,
-    "nombre": "Vinilo",
-    "marca": "Sony",
-    "descripcion": "Vinilo de alta fidelidad con una selección de éxitos clásicos.",
-    "categoria": "vinilo",
-    "precio": 30,
-    "imagen": "vinilo1.jpg"
+  "id": 3,
+  "name": "Vinilo",
+  "brand": "Sony",
+  "description": "Vinilo de alta fidelidad con una selección de éxitos clásicos.",
+  "category": "vinilo",
+  "price": 30,
+  "image": "vinilo1.jpg"
   },
   {
-    "id": 4,
-    "nombre": "Batería",
-    "marca": "Pearl",
-    "descripcion": "Set completo de batería para músicos de todos los niveles.",
-    "categoria": "instrumento",
-    "precio": 2000,
-    "imagen": "bateria1.jpg"
+  "id": 4,
+  "name": "Batería",
+  "brand": "Pearl",
+  "description": "Set completo de batería para músicos de todos los niveles.",
+  "category": "instrumento",
+  "price": 2000,
+  "image": "bateria1.jpg"
   },
   {
-    "id": 5,
-    "nombre": "Pedal de efectos",
-    "marca": "Boss",
-    "descripcion": "Pedal versátil con una amplia gama de efectos para guitarra eléctrica.",
-    "categoria": "accesorio",
-    "precio": 150,
-    "imagen": "pedal1.jpg"
+  "id": 5,
+  "name": "Pedal de efectos",
+  "brand": "Boss",
+  "description": "Pedal versátil con una amplia gama de efectos para guitarra eléctrica.",
+  "category": "accesorio",
+  "price": 150,
+  "image": "pedal1.jpg"
   },
   {
-    "id": 6,
-    "nombre": "Vinilo",
-    "marca": "Universal Music",
-    "descripcion": "Edición especial de vinilo con el álbum más reciente de tu banda favorita.",
-    "categoria": "vinilo",
-    "precio": 40,
-    "imagen": "vinilo2.jpg"
+  "id": 6,
+  "name": "Vinilo",
+  "brand": "Universal Music",
+  "description": "Edición especial de vinilo con el álbum más reciente de tu banda favorita.",
+  "category": "vinilo",
+  "price": 40,
+  "image": "vinilo2.jpg"
   },
   {
-    "id": 7,
-    "nombre": "Teclado",
-    "marca": "Roland",
-    "descripcion": "Teclado profesional con una variedad de sonidos y funciones avanzadas.",
-    "categoria": "instrumento",
-    "precio": 1800,
-    "imagen": "teclado1.jpg"
+  "id": 7,
+  "name": "Teclado",
+  "brand": "Roland",
+  "description": "Teclado profesional con una variedad de sonidos y funciones avanzadas.",
+  "category": "instrumento",
+  "price": 1800,
+  "image": "teclado1.jpg"
   },
   {
-    "id": 8,
-    "nombre": "Correa para guitarra",
-    "marca": "Levy's",
-    "descripcion": "Correa de cuero ajustable para guitarristas que buscan comodidad y estilo.",
-    "categoria": "accesorio",
-    "precio": 50,
-    "imagen": "correa1.jpg"
+  "id": 8,
+  "name": "Correa para guitarra",
+  "brand": "Levy's",
+  "description": "Correa de cuero ajustable para guitarristas que buscan comodidad y estilo.",
+  "category": "accesorio",
+  "price": 50,
+  "image": "correa1.jpg"
   },
   {
-    "id": 9,
-    "nombre": "Vinilo",
-    "marca": "Warner Music",
-    "descripcion": "Colección especial de vinilos con los éxitos más grandes de los años 80.",
-    "categoria": "vinilo",
-    "precio": 60,
-    "imagen": "vinilo3.jpg"
+  "id": 9,
+  "name": "Vinilo",
+  "brand": "Warner Music",
+  "description": "Colección especial de vinilos con los éxitos más grandes de los años 80.",
+  "category": "vinilo",
+  "price": 60,
+  "image": "vinilo3.jpg"
   },
   {
-    "id": 10,
-    "nombre": "Saxofón",
-    "marca": "Yamaha",
-    "descripcion": "Saxofón alto profesional con un sonido cálido y potente.",
-    "categoria": "instrumento",
-    "precio": 2500,
-    "imagen": "saxofon1.jpg"
+  "id": 10,
+  "name": "Saxofón",
+  "brand": "Yamaha",
+  "description": "Saxofón alto profesional con un sonido cálido y potente.",
+  "category": "instrumento",
+  "price": 2500,
+  "image": "saxofon1.jpg"
   },
   {
-    "id": 11,
-    "nombre": "Afinador",
-    "marca": "Korg",
-    "descripcion": "Afinador cromático compacto y preciso para todo tipo de instrumentos.",
-    "categoria": "accesorio",
-    "precio": 20,
-    "imagen": "afinador1.jpg"
+  "id": 11,
+  "name": "Afinador",
+  "brand": "Korg",
+  "description": "Afinador cromático compacto y preciso para todo tipo de instrumentos.",
+  "category": "accesorio",
+  "price": 20,
+  "image": "afinador1.jpg"
   },
   {
-    "id": 12,
-    "nombre": "Vinilo",
-    "marca": "EMI",
-    "descripcion": "Edición remasterizada en vinilo del álbum clásico de rock.",
-    "categoria": "vinilo",
-    "precio": 35,
-    "imagen": "vinilo4.jpeg"
+  "id": 12,
+  "name": "Vinilo",
+  "brand": "EMI",
+  "description": "Edición remasterizada en vinilo del álbum clásico de rock.",
+  "category": "vinilo",
+  "price": 35,
+  "image": "vinilo4.jpeg"
   },
   {
-    "id": 13,
-    "nombre": "Piano digital",
-    "marca": "Casio",
-    "descripcion": "Piano digital con teclas contrapesadas y múltiples sonidos integrados.",
-    "categoria": "instrumento",
-    "precio": 1200,
-    "imagen": "piano1.jpg"
+  "id": 13,
+  "name": "Piano digital",
+  "brand": "Casio",
+  "description": "Piano digital con teclas contrapesadas y múltiples sonidos integrados.",
+  "category": "instrumento",
+  "price": 1200,
+  "image": "piano1.jpg"
   },
   {
-    "id": 14,
-    "nombre": "Cuerdas para guitarra",
-    "marca": "D'Addario",
-    "descripcion": "Set de cuerdas de alta calidad para guitarra acústica.",
-    "categoria": "accesorio",
-    "precio": 15,
-    "imagen": "cuerdas1.jpg"
+  "id": 14,
+  "name": "Cuerdas para guitarra",
+  "brand": "D'Addario",
+  "description": "Set de cuerdas de alta calidad para guitarra acústica.",
+  "category": "accesorio",
+  "price": 15,
+  "image": "cuerdas1.jpg"
   },
   {
-    "id": 15,
-    "nombre": "Vinilo",
-    "marca": "Capitol Records",
-    "descripcion": "Vinilo de colección con las mejores canciones de la era del jazz.",
-    "categoria": "vinilo",
-    "precio": 50,
-    "imagen": "vinilo5.jpg"
+  "id": 15,
+  "name": "Vinilo",
+  "brand": "Capitol Records",
+  "description": "Vinilo de colección con las mejores canciones de la era del jazz.",
+  "category": "vinilo",
+  "price": 50,
+  "image": "vinilo5.jpg"
   },
   {
-    "id": 16,
-    "nombre": "Bajo eléctrico",
-    "marca": "Ibanez",
-    "descripcion": "Bajo eléctrico de 5 cuerdas con un diseño ergonómico y un sonido potente.",
-    "categoria": "instrumento",
-    "precio": 900,
-    "imagen": "bajo1.jpg"
+  "id": 16,
+  "name": "Bajo eléctrico",
+  "brand": "Ibanez",
+  "description": "Bajo eléctrico de 5 cuerdas con un diseño ergonómico y un sonido potente.",
+  "category": "instrumento",
+  "price": 900,
+  "image": "bajo1.jpg"
   }
-]
+  ]
