@@ -53,10 +53,10 @@ Update: (req, res) => {
     res.redirect(`/product/detail/${productId}`);
 },
 Delete: (req,res)=> {
-	const productId = req.params.id
+	const productId = req.params.id;
 	productService.deleteProduct(productId);
 	res.redirect('/')
-}
+	}
 };
 
 module.exports = productsController;

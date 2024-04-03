@@ -3,10 +3,11 @@ const path = require("path");
 
 const productsPath = path.join(__dirname, "../data/productsDataBase.json");
 
-const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
+
 
 const productService = {
   getAllProducts: () => {
+    const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
     return products
   },
 
@@ -46,12 +47,10 @@ const productService = {
     }
   },
 
-  deleteProduct : ()=>{
-    const getoneForDelete = productService.getProductsById();
-    if (getoneForDelete !== -1) {
-      products.pop()
-      fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");
-    }
+  deleteProduct : function (id) {
+    const products = productService.getAllProducts();
+    let allProducts = products.filter(oneProduct => oneProduct.id != id);
+      fs.writeFileSync(productsPath, JSON.stringify(allProducts, null, 2), "utf-8");    
   }
 }
 
