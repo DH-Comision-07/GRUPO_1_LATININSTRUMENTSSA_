@@ -10,11 +10,11 @@
 
 		<div class="contenedor_general">
 			<div class="contenedor_imagen">
-				<img class="imagen_producto" src="/img/products/<%= product.imagen %>" alt="" />
+				<img class="imagen_producto" src="/img/products/<%= product.image %>" alt="" />
 			</div>
 			<div class="contenedor_detalle_producto">
-				<h1 class="nombre_grande_producto">Nombre de producto: <%= product.nombre %></h1>
-				<h2 class="precio_producto">$<%= product.precio %></h2>
+				<h1 class="nombre_grande_producto">Nombre de producto: <%= product.name %></h1>
+				<h2 class="precio_producto">$<%= product.price %></h2>
 				<br />
 				<div class="cantidad">
 					<button>-</button>
@@ -36,7 +36,7 @@
 				<br />
 				<h2 class="nombre_pequeño_producto"><%= product.nombre %></h2>
 				<br />
-				<p>Descripción: <%= product.descripcion %></p>
+				<p>Descripción: <%= product.description %></p>
 				<br />
 			</div>
 		</div>
