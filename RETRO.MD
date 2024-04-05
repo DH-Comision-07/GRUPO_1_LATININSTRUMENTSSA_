@@ -43,3 +43,25 @@ Investigar y evaluar herramientas de colaboración en tiempo real , si bien esto
 Por el momento no descartamos ninguna practica, ya que seguimos explorando el trabajo colaborativo
 
 
+- **Retro: 4° Sprint**
+
+- **Start Doing:**
+
+- Mejorar estilos centrar elementos e imagenes para una mejor experiencia de usuario
+
+- **More of:**  
+-Reuniones de avance para discutir el progreso y abordar cualquier problema que surgiera.
+
+- **Keep Doing:** 
+-Comunicación fluida con el equipo y apoyo de los miembros con mas experiencia para despejar dudas al resto.
+
+- **Less of:**  
+- En este Sprint nos dimos cuenta que utilizabamos dos lenguajes para nombrar las propiedades de los elementos, y esto generaba confusiones al memonto de leer el codigo
+
+
+- **Stop Doing:**  
+
+- Postergar actividades, descubrimos que todo lleva un proceso y a veces puede ser más extenso de lo que creemos.
+
+
+
