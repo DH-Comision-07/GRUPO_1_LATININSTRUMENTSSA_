@@ -10,11 +10,11 @@
 
 		<div class="contenedor_general">
 			<div class="contenedor_imagen">
-				<img class="imagen_producto" src="/img/home/saxophone.png" alt="" />
+				<img class="imagen_producto" src="/img/products/<%= product.image %>" alt="" />
 			</div>
 			<div class="contenedor_detalle_producto">
-				<h1 class="nombre_grande_producto">Nombre de producto Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-				<h2 class="precio_producto">$0.00</h2>
+				<h1 class="nombre_grande_producto">Nombre de producto: <%= product.name %></h1>
+				<h2 class="precio_producto">$<%= product.price %></h2>
 				<br />
 				<div class="cantidad">
 					<button>-</button>
@@ -30,76 +30,16 @@
 					<button class="seguir">SEGUIR COMPRANDO</button>
 					<br />
 					<br />
-					<button class="seguir"><a class="seguir" href="/product/edit">EDITAR PRODUCTO</a></button>
+					<button class="seguir"><a class="seguir" href="/product/edit/<%= product.id %>">EDITAR PRODUCTO</a></button>
 				</div>
 				<br />
 				<br />
-				<h2 class="nombre_pequeño_producto">Nombre de producto</h2>
+				<h2 class="nombre_pequeño_producto"><%= product.nombre %></h2>
 				<br />
-				<p>Descripción: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi alias iste in corrupti! Dolore facilis velit ullam reiciendis ipsa, odit vitae voluptates ad corporis commodi ducimus quia accusamus quaerat mollitia.</p>
+				<p>Descripción: <%= product.description %></p>
 				<br />
-				<div class="tabla">
-					<table class="ficha_tecnica">
-						<caption>
-							Ficha Técnica
-						</caption>
-						<tr>
-							<td>Fila 1</td>
-							<td>Fila 1</td>
-						</tr>
-						<tr>
-							<td>Fila 2</td>
-							<td>Fila 2</td>
-						</tr>
-						<tr>
-							<td>Fila 3</td>
-							<td>Fila 3</td>
-						</tr>
-						<tr>
-							<td>Fila 4</td>
-							<td>Fila 4</td>
-						</tr>
-						<tr>
-							<td>Fila 5</td>
-							<td>Fila 5</td>
-						</tr>
-						<tr>
-							<td>Fila 6</td>
-							<td>Fila 6</td>
-						</tr>
-						<tr>
-							<td>Fila 7</td>
-							<td>Fila 7</td>
-						</tr>
-						<tr>
-							<td>Fila 8</td>
-							<td>Fila 8</td>
-						</tr>
-						<tr>
-							<td>Fila 9</td>
-							<td>Fila 9</td>
-						</tr>
-						<tr>
-							<td>Fila 10</td>
-							<td>Fila 10</td>
-						</tr>
-						<tr>
-							<td>Fila 11</td>
-							<td>Fila 11</td>
-						</tr>
-						<tr>
-							<td>Fila 12</td>
-							<td>Fila 12</td>
-						</tr>
-						<tr>
-							<td>Fila 13</td>
-							<td>Fila 13</td>
-						</tr>
-					</table>
-				</div>
 			</div>
 		</div>
 	</body>
-
 	<%- include ("partials/Footer.ejs") %>
 </html>
