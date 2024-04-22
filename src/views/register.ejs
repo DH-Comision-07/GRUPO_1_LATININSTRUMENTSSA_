@@ -16,28 +16,33 @@
                 <h1>Registrarme</h1>
             </div>
             <div class="container-form">
-                <form action="registro" method="POST" class="form">
+                <form action="register" method="POST" class="form" enctype="multipart/form-data">
 
                     <div class="form-section">
                         <label>
-                            <input type="text" class="form-input" placeholder="Nombre de usuario" required>
+                            <input type="text" name="name" class="form-input" placeholder="Nombre de usuario">
                         </label>
                     </div>
                     <div class="form-section">
                         <label>
-                            <input type="text" class="form-input" placeholder="Email" required>
+                            <input type="email" name="email" class="form-input" placeholder="Email" >
                         </label>
                     </div>
                     <div class="form-section">
                         <label>
-                            <input type="password" class="form-input" placeholder="Constraseña" required>
+                            <input type="password" name="password" class="form-input" placeholder="Constraseña" >
                         </label>
                     </div>
                     <div class="form-section">
                         <label>
-                            <input type="password" class="form-input" placeholder="Repite Contraseña" required>
+                            <input type="password" name="password" class="form-input" placeholder="Repite Contraseña" >
                         </label>
                     </div>
+					<div class="form-section">
+						<label for="image" class="label-form">Imagen</label>
+						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
+					</div>
+
                     <div class="form-section">
                         <input type="submit" class="form-input-button" value="Registrarse">
                     </div>
