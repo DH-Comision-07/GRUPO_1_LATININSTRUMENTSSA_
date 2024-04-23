@@ -3,8 +3,8 @@
 
 <head>
     <%- include('partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/styleRegistro.css">
-    <title>Registro</title>
+        <link rel="stylesheet" href="/css/styleRegistro.css">
+        <title>Registro</title>
 </head>
 
 <body>
@@ -17,44 +17,74 @@
             </div>
             <div class="container-form">
                 <form action="register" method="POST" class="form" enctype="multipart/form-data">
+                                    <div class="form-section">
+                                        <label>
+                                            <input 
+                                            type="text" 
+                                            name="name" 
+                                            class="form-input"
+                                            placeholder="Nombre de usuario" 
+                                            value= <%= locals.oldData ? oldData.name : null %>
+                                            >
+                                        </label>
+                                        <% if(locals.errors && errors.name) {%>
+                                            <div class="text-danger" style="color: red"> <%= errors.name.msg%></div>
+                                            <% } %>
+                                    </div>
+                                    <div class="form-section">
+                                        <label>
+                                            <input 
+                                            type="email" 
+                                            name="email" 
+                                            class="form-input" 
+                                            placeholder="Email" 
+                                            value= <%= locals.oldData ? oldData.email : null %>
+                                            >
+                                        </label>
+                                        <% if(locals.errors && errors.email) {%>
+                                            <div class="text-danger" style="color: red"> <%= errors.email.msg%></div>
+                                            <% } %>
+                                    </div>
+                                    <div class="form-section">
+                                        <label>
+                                            <input 
+                                            type="password" 
+                                            name="password" 
+                                            class="form-input"
+                                            placeholder="Constraseña"
+                                            >
+                                        </label>
+                                        <% if(locals.errors && errors.password) {%>
+                                            <div class="text-danger" style="color: red"> <%= errors.password.msg%></div>
+                                            <% } %>
+                                    </div>
+                                    <div class="form-section">
+                                        <label>
+                                            <input type="password" name="password" class="form-input"
+                                                placeholder="Repite Contraseña">
+                                        </label>
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="image" class="label-form">Imagen</label>
+                                        <input id="image" name="image" type="file" class="form-input-img"
+                                            accept=".jpg, .png, .jpeg" />
+                                            <% if(locals.errors && errors.image) {%>
+                                                <div class="text-danger" style="color: red"> <%= errors.image.msg%></div>
+                                            <% } %>
+                                    </div>
 
-                    <div class="form-section">
-                        <label>
-                            <input type="text" name="name" class="form-input" placeholder="Nombre de usuario">
-                        </label>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="email" name="email" class="form-input" placeholder="Email" >
-                        </label>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="password" name="password" class="form-input" placeholder="Constraseña" >
-                        </label>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="password" name="password" class="form-input" placeholder="Repite Contraseña" >
-                        </label>
-                    </div>
-					<div class="form-section">
-						<label for="image" class="label-form">Imagen</label>
-						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
-					</div>
-
-                    <div class="form-section">
-                        <input type="submit" class="form-input-button" value="Registrarse">
-                    </div>
-                    <br>
-                    <div class="form-section"> <a href="#">
-                            <p>¿Olvidó su contraseña?
-                        </a> <br><br> </p>
-                    </div>
-                    <br> <br>
-                    <div class="form-section">
-                        <input type="submit" class="form-input-button" value="Ingreso con Google">
-                    </div>
+                                    <div class="form-section">
+                                        <input type="submit" class="form-input-button" value="Registrarse">
+                                    </div>
+                                    <br>
+                                    <div class="form-section"> <a href="#">
+                                            <p>¿Olvidó su contraseña?
+                                        </a> <br><br> </p>
+                                    </div>
+                                    <br> <br>
+                                    <div class="form-section">
+                                        <input type="submit" class="form-input-button" value="Ingreso con Google">
+                                    </div>
             </div>
             </form>
         </div>
