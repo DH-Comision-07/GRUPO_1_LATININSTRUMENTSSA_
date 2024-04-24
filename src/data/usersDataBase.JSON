@@ -1,146 +1,147 @@
+
 [
     {
-        "id": 1,
-        "nombre": "Javier",
-        "apellido": "Milei",
-        "rol": "administrador",
-        "email": "eljavopresi@example.com",
-        "contraseña": "javopro159",
-        "imagen": "presi.jpg"
+    "id": 1,
+    "name": "Javier",
+    "surname": "Milei",
+    "role": "administrator",
+    "email": "eljavopresi@example.com",
+    "password": "javopro159",
+    "image": "presi.jpg"
     },
     {
-        "id": 2,
-        "nombre": "María",
-        "apellido": "López",
-        "rol": "cliente",
-        "email": "marialopez@example.com",
-        "contraseña": "maria456",
-        "imagen": "maria.jpg"
+    "id": 2,
+    "name": "María",
+    "surname": "López",
+    "role": "client",
+    "email": "marialopez@example.com",
+    "password": "maria456",
+    "image": "maria.jpg"
     },
     {
-        "id": 3,
-        "nombre": "Carlos",
-        "apellido": "Martínez",
-        "rol": "cliente",
-        "email": "carlosmartinez@example.com",
-        "contraseña": "carlos789",
-        "imagen": "carlos.jpg"
+    "id": 3,
+    "name": "Carlos",
+    "surname": "Martínez",
+    "role": "client",
+    "email": "carlosmartinez@example.com",
+    "password": "carlos789",
+    "image": "carlos.jpg"
     },
     {
-        "id": 4,
-        "nombre": "Ana",
-        "apellido": "Rodríguez",
-        "rol": "cliente",
-        "email": "anarodriguez@example.com",
-        "contraseña": "ana123",
-        "imagen": "ana.jpg"
+    "id": 4,
+    "name": "Ana",
+    "surname": "Rodríguez",
+    "role": "client",
+    "email": "anarodriguez@example.com",
+    "password": "ana123",
+    "image": "ana.jpg"
     },
     {
-        "id": 5,
-        "nombre": "Pedro",
-        "apellido": "Gómez",
-        "rol": "administrador",
-        "email": "pedrogomez@example.com",
-        "contraseña": "pedro456",
-        "imagen": "pedro.jpg"
+    "id": 5,
+    "name": "Pedro",
+    "surname": "Gómez",
+    "role": "administrator",
+    "email": "pedrogomez@example.com",
+    "password": "pedro456",
+    "image": "pedro.jpg"
     },
     {
-        "id": 6,
-        "nombre": "Laura",
-        "apellido": "Pérez",
-        "rol": "cliente",
-        "email": "lauraperez@example.com",
-        "contraseña": "laura789",
-        "imagen": "laura.jpg"
+    "id": 6,
+    "name": "Laura",
+    "surname": "Pérez",
+    "role": "client",
+    "email": "lauraperez@example.com",
+    "password": "laura789",
+    "image": "laura.jpg"
     },
     {
-        "id": 7,
-        "nombre": "Roberto",
-        "apellido": "Hernández",
-        "rol": "cliente",
-        "email": "robertohernandez@example.com",
-        "contraseña": "roberto123",
-        "imagen": "roberto.jpg"
+    "id": 7,
+    "name": "Roberto",
+    "surname": "Hernández",
+    "role": "client",
+    "email": "robertohernandez@example.com",
+    "password": "roberto123",
+    "image": "roberto.jpg"
     },
     {
-        "id": 8,
-        "nombre": "Sofía",
-        "apellido": "Díaz",
-        "rol": "administrador",
-        "email": "sofiadiaz@example.com",
-        "contraseña": "sofia456",
-        "imagen": "sofia.jpg"
+    "id": 8,
+    "name": "Sofía",
+    "surname": "Díaz",
+    "role": "administrator",
+    "email": "sofiadiaz@example.com",
+    "password": "sofia456",
+    "image": "sofia.jpg"
     },
     {
-        "id": 9,
-        "nombre": "Javier",
-        "apellido": "Sanchez",
-        "rol": "cliente",
-        "email": "javiersanchez@example.com",
-        "contraseña": "javier789",
-        "imagen": "javier.jpg"
+    "id": 9,
+    "name": "Javier",
+    "surname": "Sanchez",
+    "role": "client",
+    "email": "javiersanchez@example.com",
+    "password": "javier789",
+    "image": "javier.jpg"
     },
     {
-        "id": 10,
-        "nombre": "Elena",
-        "apellido": "Fernández",
-        "rol": "cliente",
-        "email": "elenafernandez@example.com",
-        "contraseña": "elena123",
-        "imagen": "elena.jpg"
+    "id": 10,
+    "name": "Elena",
+    "surname": "Fernández",
+    "role": "client",
+    "email": "elenafernandez@example.com",
+    "password": "elena123",
+    "image": "elena.jpg"
     },
     {
-        "id": 11,
-        "nombre": "Daniel",
-        "apellido": "Moreno",
-        "rol": "administrador",
-        "email": "danielmoreno@example.com",
-        "contraseña": "daniel456",
-        "imagen": "daniel.jpg"
+    "id": 11,
+    "name": "Daniel",
+    "surname": "Moreno",
+    "role": "administrator",
+    "email": "danielmoreno@example.com",
+    "password": "daniel456",
+    "image": "daniel.jpg"
     },
     {
-        "id": 12,
-        "nombre": "Carmen",
-        "apellido": "Ruiz",
-        "rol": "cliente",
-        "email": "carmenruiz@example.com",
-        "contraseña": "carmen789",
-        "imagen": "carmen.jpg"
+    "id": 12,
+    "name": "Carmen",
+    "surname": "Ruiz",
+    "role": "client",
+    "email": "carmenruiz@example.com",
+    "password": "carmen789",
+    "image": "carmen.jpg"
     },
     {
-        "id": 13,
-        "nombre": "Pablo",
-        "apellido": "Torres",
-        "rol": "cliente",
-        "email": "pablotorres@example.com",
-        "contraseña": "pablo123",
-        "imagen": "pablo.jpg"
+    "id": 13,
+    "name": "Pablo",
+    "surname": "Torres",
+    "role": "client",
+    "email": "pablotorres@example.com",
+    "password": "pablo123",
+    "image": "pablo.jpg"
     },
     {
-        "id": 14,
-        "nombre": "Isabel",
-        "apellido": "Gutiérrez",
-        "rol": "administrador",
-        "email": "isabelgutierrez@example.com",
-        "contraseña": "isabel456",
-        "imagen": "isabel.jpg"
+    "id": 14,
+    "name": "Isabel",
+    "surname": "Gutiérrez",
+    "role": "administrator",
+    "email": "isabelgutierrez@example.com",
+    "password": "isabel456",
+    "image": "isabel.jpg"
     },
     {
-        "id": 15,
-        "nombre": "Adrián",
-        "apellido": "Santiago",
-        "rol": "cliente",
-        "email": "adriansantiago@example.com",
-        "contraseña": "adrian789",
-        "imagen": "adrian.jpg"
+    "id": 15,
+    "name": "Adrián",
+    "surname": "Santiago",
+    "role": "client",
+    "email": "adriansantiago@example.com",
+    "password": "adrian789",
+    "image": "adrian.jpg"
     },
     {
-        "id": 16,
-        "nombre": "Rosa",
-        "apellido": "Ortega",
-        "rol": "cliente",
-        "email": "rosaortega@example.com",
-        "contraseña": "rosa123",
-        "imagen": "rosa.jpg"
+    "id": 16,
+    "name": "Rosa",
+    "surname": "Ortega",
+    "role": "client",
+    "email": "rosaortega@example.com",
+    "password": "rosa123",
+    "image": "rosa.jpg"
     }
-]
+    ]
