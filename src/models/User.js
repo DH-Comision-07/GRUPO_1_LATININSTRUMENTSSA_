@@ -1,9 +1,7 @@
-const { validationResult } = require("express-validator");
-
 const fs= require('fs')
 
-const userService = {
-    
+const User = {
+
     fileName: './src/data/usersDataBase.json',
 
     getData: function (){
@@ -53,19 +51,9 @@ const userService = {
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
         fs.writeFileSync(this.fileName, JSON.stringify(finalUsers,null, ' '))
         return true;
-    },
+    }
 
-	validateOne: (fromUser) => {
-		const resultValidation = validationResult(fromUser);
-		if (resultValidation.errors.length > 0) {
-			return {
-				errors: resultValidation.mapped(),
-				oldData: fromUser.body,
-			};
-		} else {
-			return {};
-		}
-	},
+
 };
 
-module.exports = userService;
+module.exports = User;
