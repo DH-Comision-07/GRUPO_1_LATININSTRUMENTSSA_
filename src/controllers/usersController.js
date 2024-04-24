@@ -10,7 +10,9 @@ const usersController = {
 	},
 	processRegister:function (req,res){
 		const validUser =userService.validateOne(req);
-        return res.render('register',validUser)
+		if (validUser.errors){
+        return res.render('register', validUser)}
+		return res.redirect('/')	
 	}
 }
 
