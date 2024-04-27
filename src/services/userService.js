@@ -2,13 +2,13 @@ const { validationResult } = require("express-validator");
 const { body } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
-const fs= require('fs')
+const fs = require('fs')
 
 const userService = {
-    
-    fileName: './src/data/usersDataBase.json',
 
-    validateOne: (fromUser) => {
+	fileName: './src/data/usersDataBase.json',
+
+	validateOne: (fromUser) => {
 		const resultValidation = validationResult(fromUser);
 		if (resultValidation.errors.length > 0) {
 			return {
@@ -19,8 +19,8 @@ const userService = {
 			return {};
 		}
 	},
-    validateOneComplete: function(req,res){
-        const validUser = userService.validateOne(req);
+	validateOneComplete: function (req, res) {
+		const validUser = userService.validateOne(req);
 		if (validUser.errors) {
 			return res.render("register", validUser);
 		} else {
@@ -37,15 +37,24 @@ const userService = {
 				});
 			};
 			let userToCreate = {
-                
+
 				...req.body,
 				password: bcryptjs.hashSync(req.body.password[0], 10),
 				image: req.file.filename
 			};
-            User.create(userToCreate);
-           
-    }
-}
+			User.create(userToCreate);
+
+		}
+	},
+	loginProcess: function (req, res){
+		const validUser = userService.validateOne(req);
+
+		if (validUser.errors) {
+			return res.render("login", validUser);
+		} else {	
+			return { }
+		}
+	}
 }
 
 module.exports = userService;
