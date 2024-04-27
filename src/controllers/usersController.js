@@ -1,4 +1,5 @@
 const userService = require("../services/userService");
+const { body } = require('express-validator');
 
 const usersController = {
 	login: function (req, res) {
@@ -10,12 +11,9 @@ const usersController = {
 	},
 
 	processRegister: function (req, res) {
-		const validUser = userService.validateOne(req);
-		if (validUser.errors) {
-			return res.render("register", validUser);
-		} else {
+		    userService.validateOneComplete(req,res);
 			return res.redirect("/");
-		}
+		
 	},
 };
 
