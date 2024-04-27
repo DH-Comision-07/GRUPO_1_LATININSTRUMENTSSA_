@@ -46,13 +46,24 @@ const userService = {
 
 		}
 	},
-	loginProcess: function (req, res){
-		const validUser = userService.validateOne(req);
+	loginProcess: function (req, res) {
 
+		const validUser = userService.validateOne(req);
 		if (validUser.errors) {
 			return res.render("login", validUser);
-		} else {	
-			return { }
+		} else {
+			let userToLogin = User.findByField('name', req.body.name);
+			if (userToLogin) {
+
+			} else {
+				return res.render('login', {
+					errors: {
+						name: {
+							msg: 'Este usuario no se encuentra registrado'
+						}
+					}
+				})
+			}
 		}
 	}
 }
