@@ -6,12 +6,9 @@ const usersController = {
 		res.render("login");
 	},
     loginProcess:function (req, res){
-		userService.loginProcess(req,res)
-		return res.redirect("/");
+		let user = userService.loginProcess(req,res)
+		return res.render("profile", {user:user});
 	},
-
-
-
 	register: function (req, res) {
 		res.render("register");
 	},

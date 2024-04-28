@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('partials/head.ejs') %>
+		<link rel="stylesheet" href="/css/styleProductDetail.css" />
+	</head>
+
+	<body>
+		<%- include ("partials/Header.ejs") %>
+
+		<div class="contenedor_general">
+			<div class="contenedor_imagen">
+				<img class="imagen_producto" src="/img/users/<%= user.image %>" alt="" />
+			</div>
+			<div class="contenedor_detalle_producto">
+				<h1 class="nombre_grande_producto"><%= user.name %></h1>
+				<h2 class="precio_producto">e-mail: <%= user.email %></h2>
+				<br />
+				<!-- <div class="botones">
+					<button class="seguir"><a class="seguir" href="/edit/< % = user.id %>">EDITAR USUARIO</a></button>
+				</div> -->
+				<br />
+				<p><%= user.description %></p>
+				<br />
+			</div>
+		</div>
+	</body>
+	<%- include ("partials/Footer.ejs") %>
+</html>

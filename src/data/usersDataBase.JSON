@@ -1,146 +1,43 @@
 [
- {
-  "id": 1,
-  "name": "Javier",
-  "surname": "Milei",
-  "role": "administrator",
-  "email": "eljavopresi@example.com",
-  "password": "javopro159",
-  "image": "presi.jpg"
- },
- {
-  "id": 2,
-  "name": "María",
-  "surname": "López",
-  "role": "client",
-  "email": "marialopez@example.com",
-  "password": "maria456",
-  "image": "maria.jpg"
- },
- {
-  "id": 3,
-  "name": "Carlos",
-  "surname": "Martínez",
-  "role": "client",
-  "email": "carlosmartinez@example.com",
-  "password": "carlos789",
-  "image": "carlos.jpg"
- },
- {
-  "id": 4,
-  "name": "Ana",
-  "surname": "Rodríguez",
-  "role": "client",
-  "email": "anarodriguez@example.com",
-  "password": "ana123",
-  "image": "ana.jpg"
- },
- {
-  "id": 5,
-  "name": "Pedro",
-  "surname": "Gómez",
-  "role": "administrator",
-  "email": "pedrogomez@example.com",
-  "password": "pedro456",
-  "image": "pedro.jpg"
- },
- {
-  "id": 6,
-  "name": "Laura",
-  "surname": "Pérez",
-  "role": "client",
-  "email": "lauraperez@example.com",
-  "password": "laura789",
-  "image": "laura.jpg"
- },
- {
-  "id": 7,
-  "name": "Roberto",
-  "surname": "Hernández",
-  "role": "client",
-  "email": "robertohernandez@example.com",
-  "password": "roberto123",
-  "image": "roberto.jpg"
- },
- {
-  "id": 8,
-  "name": "Sofía",
-  "surname": "Díaz",
-  "role": "administrator",
-  "email": "sofiadiaz@example.com",
-  "password": "sofia456",
-  "image": "sofia.jpg"
- },
- {
-  "id": 9,
-  "name": "Javier",
-  "surname": "Sanchez",
-  "role": "client",
-  "email": "javiersanchez@example.com",
-  "password": "javier789",
-  "image": "javier.jpg"
- },
- {
-  "id": 10,
-  "name": "Elena",
-  "surname": "Fernández",
-  "role": "client",
-  "email": "elenafernandez@example.com",
-  "password": "elena123",
-  "image": "elena.jpg"
- },
- {
-  "id": 11,
-  "name": "Daniel",
-  "surname": "Moreno",
-  "role": "administrator",
-  "email": "danielmoreno@example.com",
-  "password": "daniel456",
-  "image": "daniel.jpg"
- },
- {
-  "id": 12,
-  "name": "Carmen",
-  "surname": "Ruiz",
-  "role": "client",
-  "email": "carmenruiz@example.com",
-  "password": "carmen789",
-  "image": "carmen.jpg"
- },
- {
-  "id": 13,
-  "name": "Pablo",
-  "surname": "Torres",
-  "role": "client",
-  "email": "pablotorres@example.com",
-  "password": "pablo123",
-  "image": "pablo.jpg"
- },
- {
-  "id": 14,
-  "name": "Isabel",
-  "surname": "Gutiérrez",
-  "role": "administrator",
-  "email": "isabelgutierrez@example.com",
-  "password": "isabel456",
-  "image": "isabel.jpg"
- },
- {
-  "id": 15,
-  "name": "Adrián",
-  "surname": "Santiago",
-  "role": "client",
-  "email": "adriansantiago@example.com",
-  "password": "adrian789",
-  "image": "adrian.jpg"
- },
- {
-  "id": 16,
-  "name": "Rosa",
-  "surname": "Ortega",
-  "role": "client",
-  "email": "rosaortega@example.com",
-  "password": "rosa123",
-  "image": "rosa.jpg"
- }
-]
+    {
+      "id": 1,
+      "name": "Javier",
+      "email": "eljavopresi@example.com",
+      "password": "$2a$10$560uObyx1Pw6sbcidCEee.4CcS/Ol9s3UhA5jENfzD60hDXshiCia",
+      "image": "1714250008774_img.jpg",
+      "description": "Javier es el actual presidente de Argentina. Ha liderado el país en tiempos de cambio y desafíos, trabajando para mejorar la economía y la calidad de vida de los argentinos."
+    },
+    {
+      "id": 2,
+      "name": "Maria Lopez",
+      "email": "marialopez@example.com",
+      "password": "$2a$10$n46WQdg3ZDRZgUf8hpvjceCGfQR3zjhW5KPDLscNtpfVRrMZuBCxG",
+      "image": "1714250141107_img.png",
+      "description": "Maria Lopez es una persona dedicada y trabajadora. Siempre busca la excelencia en todo lo que hace y es un miembro valioso de su comunidad."
+    },
+    {
+      "id": 3,
+      "name": "Carlos Martinez",
+      "email": "carlitos@example.com",
+      "password": "$2a$10$MH7YG2l1vP/rT7fvEQmg3OGkLHlOyN3eQTRSkA6wKiycmMs3GU3/2",
+      "image": "1714250177461_img.jpg",
+      "description": "Carlos Martinez es un apasionado de la tecnología y la innovación. Ha trabajado en numerosos proyectos exitosos y siempre está buscando aprender algo nuevo."
+    },
+    {
+      "id": 4,
+      "name": "ana Rodriguez",
+      "email": "anarodriguez@example.com",
+      "password": "$2a$10$fEoIWhO8oV9YYJH71hToEuabedATp1wgq9gtHTsFodTVXlG92/or.",
+      "image": "1714250215075_img.png",
+      "description": "Ana Rodriguez es una amante de los animales y defensora de los derechos de los animales. Siempre está buscando formas de ayudar a las criaturas indefensas de nuestro mundo."
+    },
+    {
+      "id": 5,
+      "name": "Pedro Picapiedras",
+      "email": "elpicapiedras@example.com",
+      "password": "$2a$10$1Qki5qnn.4IR//Yd9K3T.uYlPrLgGPtlUKi.tsZmYDmewDhGIjAtG",
+      "image": "1714250265144_img.jpg",
+      "description": "Pedro Picapiedras es un aventurero intrépido que disfruta explorando el mundo y descubriendo nuevas culturas. Siempre está listo para el próximo desafío emocionante."
+    }
+  ]
+  
