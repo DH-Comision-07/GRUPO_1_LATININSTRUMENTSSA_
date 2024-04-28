@@ -20,7 +20,10 @@ const usersController = {
 	},
 	profile:function (req, res) {
 		res.render('profile', {user:req.session.userLogged})
+	},
+	logout: function(req,res){
+		req.session.destroy();
+		return res.redirect('/')
 	}
-};
-
+}
 module.exports = usersController;
