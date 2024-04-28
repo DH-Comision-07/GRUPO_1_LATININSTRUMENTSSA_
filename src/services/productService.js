@@ -51,7 +51,9 @@ const productService = {
     const products = productService.getAllProducts();
     let allProducts = products.filter(oneProduct => oneProduct.id != id);
       fs.writeFileSync(productsPath, JSON.stringify(allProducts, null, 2), "utf-8");    
-  }
+  },
+
+  
 }
 
 module.exports = productService

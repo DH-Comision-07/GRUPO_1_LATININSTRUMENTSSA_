@@ -1,147 +1,138 @@
-
 [
-    {
-    "id": 1,
-    "name": "Javier",
-    "surname": "Milei",
-    "role": "administrator",
-    "email": "eljavopresi@example.com",
-    "password": "javopro159",
-    "image": "presi.jpg"
-    },
-    {
-    "id": 2,
-    "name": "María",
-    "surname": "López",
-    "role": "client",
-    "email": "marialopez@example.com",
-    "password": "maria456",
-    "image": "maria.jpg"
-    },
-    {
-    "id": 3,
-    "name": "Carlos",
-    "surname": "Martínez",
-    "role": "client",
-    "email": "carlosmartinez@example.com",
-    "password": "carlos789",
-    "image": "carlos.jpg"
-    },
-    {
-    "id": 4,
-    "name": "Ana",
-    "surname": "Rodríguez",
-    "role": "client",
-    "email": "anarodriguez@example.com",
-    "password": "ana123",
-    "image": "ana.jpg"
-    },
-    {
-    "id": 5,
-    "name": "Pedro",
-    "surname": "Gómez",
-    "role": "administrator",
-    "email": "pedrogomez@example.com",
-    "password": "pedro456",
-    "image": "pedro.jpg"
-    },
-    {
-    "id": 6,
-    "name": "Laura",
-    "surname": "Pérez",
-    "role": "client",
-    "email": "lauraperez@example.com",
-    "password": "laura789",
-    "image": "laura.jpg"
-    },
-    {
-    "id": 7,
-    "name": "Roberto",
-    "surname": "Hernández",
-    "role": "client",
-    "email": "robertohernandez@example.com",
-    "password": "roberto123",
-    "image": "roberto.jpg"
-    },
-    {
-    "id": 8,
-    "name": "Sofía",
-    "surname": "Díaz",
-    "role": "administrator",
-    "email": "sofiadiaz@example.com",
-    "password": "sofia456",
-    "image": "sofia.jpg"
-    },
-    {
-    "id": 9,
-    "name": "Javier",
-    "surname": "Sanchez",
-    "role": "client",
-    "email": "javiersanchez@example.com",
-    "password": "javier789",
-    "image": "javier.jpg"
-    },
-    {
-    "id": 10,
-    "name": "Elena",
-    "surname": "Fernández",
-    "role": "client",
-    "email": "elenafernandez@example.com",
-    "password": "elena123",
-    "image": "elena.jpg"
-    },
-    {
-    "id": 11,
-    "name": "Daniel",
-    "surname": "Moreno",
-    "role": "administrator",
-    "email": "danielmoreno@example.com",
-    "password": "daniel456",
-    "image": "daniel.jpg"
-    },
-    {
-    "id": 12,
-    "name": "Carmen",
-    "surname": "Ruiz",
-    "role": "client",
-    "email": "carmenruiz@example.com",
-    "password": "carmen789",
-    "image": "carmen.jpg"
-    },
-    {
-    "id": 13,
-    "name": "Pablo",
-    "surname": "Torres",
-    "role": "client",
-    "email": "pablotorres@example.com",
-    "password": "pablo123",
-    "image": "pablo.jpg"
-    },
-    {
-    "id": 14,
-    "name": "Isabel",
-    "surname": "Gutiérrez",
-    "role": "administrator",
-    "email": "isabelgutierrez@example.com",
-    "password": "isabel456",
-    "image": "isabel.jpg"
-    },
-    {
-    "id": 15,
-    "name": "Adrián",
-    "surname": "Santiago",
-    "role": "client",
-    "email": "adriansantiago@example.com",
-    "password": "adrian789",
-    "image": "adrian.jpg"
-    },
-    {
-    "id": 16,
-    "name": "Rosa",
-    "surname": "Ortega",
-    "role": "client",
-    "email": "rosaortega@example.com",
-    "password": "rosa123",
-    "image": "rosa.jpg"
-    }
-    ]
+ {
+  "id": 1,
+  "name": "Javier",
+  "surname": "Milei",
+  "role": "administrator",
+  "email": "eljavopresi@example.com",
+  "password": "javopro159",
+  "image": "presi.jpg"
+ },
+ {
+  "id": 2,
+  "name": "María",
+  "surname": "López",
+  "role": "client",
+  "email": "marialopez@example.com",
+  "password": "maria456",
+  "image": "maria.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Carlos",
+  "surname": "Martínez",
+  "role": "client",
+  "email": "carlosmartinez@example.com",
+  "password": "carlos789",
+  "image": "carlos.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Ana",
+  "surname": "Rodríguez",
+  "role": "client",
+  "email": "anarodriguez@example.com",
+  "password": "ana123",
+  "image": "ana.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Pedro",
+  "surname": "Gómez",
+  "role": "administrator",
+  "email": "pedrogomez@example.com",
+  "password": "pedro456",
+  "image": "pedro.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Laura",
+  "surname": "Pérez",
+  "role": "client",
+  "email": "lauraperez@example.com",
+  "password": "laura789",
+  "image": "laura.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Roberto",
+  "surname": "Hernández",
+  "role": "client",
+  "email": "robertohernandez@example.com",
+  "password": "roberto123",
+  "image": "roberto.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Sofía",
+  "surname": "Díaz",
+  "role": "administrator",
+  "email": "sofiadiaz@example.com",
+  "password": "sofia456",
+  "image": "sofia.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Javier",
+  "surname": "Sanchez",
+  "role": "client",
+  "email": "javiersanchez@example.com",
+  "password": "javier789",
+  "image": "javier.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Elena",
+  "surname": "Fernández",
+  "role": "client",
+  "email": "elenafernandez@example.com",
+  "password": "elena123",
+  "image": "elena.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Daniel",
+  "surname": "Moreno",
+  "role": "administrator",
+  "email": "danielmoreno@example.com",
+  "password": "daniel456",
+  "image": "daniel.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Carmen",
+  "surname": "Ruiz",
+  "role": "client",
+  "email": "carmenruiz@example.com",
+  "password": "carmen789",
+  "image": "carmen.jpg"
+ },
+ {
+  "id": 13,
+  "name": "Pablo",
+  "surname": "Torres",
+  "role": "client",
+  "email": "pablotorres@example.com",
+  "password": "pablo123",
+  "image": "pablo.jpg"
+ },
+ {
+  "id": 14,
+  "name": "Isabel",
+  "surname": "Gutiérrez",
+  "role": "administrator",
+  "email": "isabelgutierrez@example.com",
+  "password": "isabel456",
+  "image": "isabel.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Adrián",
+  "surname": "Santiago",
+  "role": "client",
+  "email": "adriansantiago@example.com",
+  "password": "adrian789",
+  "image": "adrian.jpg"
+ }
+
+]
