@@ -1,3 +1,4 @@
+const session = require("express-session");
 const userService = require("../services/userService");
 const { body } = require('express-validator');
 
@@ -6,8 +7,8 @@ const usersController = {
 		res.render("login");
 	},
     loginProcess:function (req, res){
-		let user = userService.loginProcess(req,res)
-		return res.render("profile", {user:user});
+		let user = userService.loginProcess(req,res);
+		return res.redirect('/users/profile');
 	},
 	register: function (req, res) {
 		res.render("register");
@@ -17,6 +18,9 @@ const usersController = {
 			return res.redirect("/");
 		
 	},
+	profile:function (req, res) {
+		res.render('profile', {user:req.session.userLogged})
+	}
 };
 
 module.exports = usersController;

@@ -4,6 +4,7 @@ const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
 const fs = require('fs');
 const { name } = require("ejs");
+const { log } = require("console");
 
 const userService = {
 
@@ -74,8 +75,10 @@ const userService = {
 							}
 						})
 					}else{ //si existe y es correcta la contraseña, voy al perfil
-					 const user = User.findByField('name', req.body.name);
-					 return user;
+					 delete userToLogin.password; //borro pass por seguridad
+					 req.session.userLogged = userToLogin;
+					//  const user = User.findByField('name', userToLogin.name);
+					 return req.session.userLogged;
 					}
 				} else { //si no existe, aviso
 					return res.render('login', {
