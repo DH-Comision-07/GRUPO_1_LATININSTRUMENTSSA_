@@ -1,4 +1,5 @@
 const { validationResult } = require("express-validator");
+
 const { body } = require('express-validator');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
@@ -92,5 +93,6 @@ const userService = {
 		}
 	}
 }
+
 
 module.exports = userService;

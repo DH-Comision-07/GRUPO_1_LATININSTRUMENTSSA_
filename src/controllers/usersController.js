@@ -2,6 +2,7 @@ const session = require("express-session");
 const userService = require("../services/userService");
 const { body } = require('express-validator');
 
+
 const usersController = {
 	login: function (req, res) {
 
@@ -31,4 +32,5 @@ const usersController = {
 		return res.redirect('/')
 	}
 }
+
 module.exports = usersController;
