@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('partials/head.ejs') %>
+		<link rel="stylesheet" href="/css/styleHome.css" />
+	</head>
+	<body>
+		<%- include ("partials/Header.ejs") %>
+		<main>
+			<section class="promos">
+				<div class="promos__contenedor">
+					<h1 class="titulo">Accesorios</h1>
+					<ul class="promos__lista">
+            <% productByCategory.forEach(product => { %>
+              <li class="promo__contenedor">
+                <div class="promo">
+                  <div class="promo__imagen"><img src="img/products/<%= product.image %>" /></div>
+                  <div class="promo__contenido">
+                    <h2 class="promo__titulo"><%= product.name %></h2>
+                    <p class="promo__texto"><%= product.description %></p>
+                    <div class="boton">
+                      <a class="btn promo__btn" href="/product/detail/<%= product.id %>">Ver producto</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            <% }) %>
+					</ul>
+				</div>
+			</section>
+			<section class="marcas carrusel">
+				<h1 class="titulo">En nosotros confían:</h1>
+				<div class="imagen-track">
+					<div class="imagen">
+						<img src="/img/home/fender-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/zildjian-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/gibson-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/marshall-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/pearl-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/yamaha-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/apple-music-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/musicnotes-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/fender-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/zildjian-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/gibson-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/marshall-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/pearl-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/yamaha-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/apple-music-logo.svg" height="100" width="250" alt="" />
+					</div>
+					<div class="imagen">
+						<img src="/img/home/musicnotes-logo.svg" height="100" width="250" alt="" />
+					</div>
+				</div>
+			
+		</main>
+		<%- include ("partials/Footer.ejs") %>
+	</body>
+</html>

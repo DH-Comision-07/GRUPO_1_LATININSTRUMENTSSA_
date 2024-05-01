@@ -13,6 +13,18 @@ const indexController = {
 	nosotros: function (req, res) {
 		res.render("nosotros");
 	},
+	instrumentos: function(req, res){
+		const productByCategory = productService.productByCategory("instrumento");
+		res.render("instrumentos", {productByCategory});
+	},
+	vinilos: function(req, res){
+		const productByCategory = productService.productByCategory("vinilo");
+		res.render("vinilos", {productByCategory});
+	},
+	accesorios: function(req, res){
+		const productByCategory = productService.productByCategory("accesorio");
+		res.render("accesorios", {productByCategory});
+	}
 };
 
 module.exports = indexController;

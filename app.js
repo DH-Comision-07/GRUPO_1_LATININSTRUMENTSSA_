@@ -2,9 +2,26 @@ const express = require("express");
 const usersRoutes = require("./src/routes/usersRoutes.js");
 const indexRoutes = require("./src/routes/indexRoutes.js");
 const productsRoutes = require("./src/routes/productsRoutes.js");
+const session = require('express-session');
+const userLoggedMidd = require('./src/middlewares/userLoggedMidd');
+const cookies = require('cookie-parser');
+
+const app = express();
+
+
 
 const methodOverride = require ('method-override');
-const app = express();
+
+
+app.use(session({
+	secret: "Shh, it's a secret",
+	resave:false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+
+app.use(userLoggedMidd);
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
