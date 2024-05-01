@@ -10,7 +10,7 @@ router.get("/login", usersController.login);
 router.post("/login", validator.validationsLogin,usersController.loginProcess);
 
 router.get("/register",guestMiddleware, usersController.register);
-router.post("/register", validator.validations,multer.upload.single('image'),usersController.processRegister);
+router.post("/register",multer.upload.single('image'),validator.validations,usersController.processRegister);
 
 router.get("/profile",authMiddleware, usersController.profile);
 

@@ -1,44 +1,50 @@
 [
-
-    {
-      "id": 1,
-      "name": "Javier",
-      "email": "eljavopresi@example.com",
-      "password": "$2a$10$560uObyx1Pw6sbcidCEee.4CcS/Ol9s3UhA5jENfzD60hDXshiCia",
-      "image": "1714250008774_img.jpg",
-      "description": "Javier es el actual presidente de Argentina. Ha liderado el país en tiempos de cambio y desafíos, trabajando para mejorar la economía y la calidad de vida de los argentinos."
-    },
-    {
-      "id": 2,
-      "name": "Maria Lopez",
-      "email": "marialopez@example.com",
-      "password": "$2a$10$n46WQdg3ZDRZgUf8hpvjceCGfQR3zjhW5KPDLscNtpfVRrMZuBCxG",
-      "image": "1714250141107_img.png",
-      "description": "Maria Lopez es una persona dedicada y trabajadora. Siempre busca la excelencia en todo lo que hace y es un miembro valioso de su comunidad."
-    },
-    {
-      "id": 3,
-      "name": "Carlos Martinez",
-      "email": "carlitos@example.com",
-      "password": "$2a$10$MH7YG2l1vP/rT7fvEQmg3OGkLHlOyN3eQTRSkA6wKiycmMs3GU3/2",
-      "image": "1714250177461_img.jpg",
-      "description": "Carlos Martinez es un apasionado de la tecnología y la innovación. Ha trabajado en numerosos proyectos exitosos y siempre está buscando aprender algo nuevo."
-    },
-    {
-      "id": 4,
-      "name": "ana Rodriguez",
-      "email": "anarodriguez@example.com",
-      "password": "$2a$10$fEoIWhO8oV9YYJH71hToEuabedATp1wgq9gtHTsFodTVXlG92/or.",
-      "image": "1714250215075_img.png",
-      "description": "Ana Rodriguez es una amante de los animales y defensora de los derechos de los animales. Siempre está buscando formas de ayudar a las criaturas indefensas de nuestro mundo."
-    },
-    {
-      "id": 5,
-      "name": "Pedro Picapiedras",
-      "email": "elpicapiedras@example.com",
-      "password": "$2a$10$1Qki5qnn.4IR//Yd9K3T.uYlPrLgGPtlUKi.tsZmYDmewDhGIjAtG",
-      "image": "1714250265144_img.jpg",
-      "description": "Pedro Picapiedras es un aventurero intrépido que disfruta explorando el mundo y descubriendo nuevas culturas. Siempre está listo para el próximo desafío emocionante."
-    }
-  ]
-
+ {
+  "id": 1,
+  "name": "Javier",
+  "email": "eljavopresi@example.com",
+  "password": "$2a$10$560uObyx1Pw6sbcidCEee.4CcS/Ol9s3UhA5jENfzD60hDXshiCia",
+  "image": "1714250008774_img.jpg",
+  "description": "Javier es el actual presidente de Argentina. Ha liderado el país en tiempos de cambio y desafíos, trabajando para mejorar la economía y la calidad de vida de los argentinos."
+ },
+ {
+  "id": 2,
+  "name": "Maria Lopez",
+  "email": "marialopez@example.com",
+  "password": "$2a$10$n46WQdg3ZDRZgUf8hpvjceCGfQR3zjhW5KPDLscNtpfVRrMZuBCxG",
+  "image": "1714250141107_img.png",
+  "description": "Maria Lopez es una persona dedicada y trabajadora. Siempre busca la excelencia en todo lo que hace y es un miembro valioso de su comunidad."
+ },
+ {
+  "id": 3,
+  "name": "Carlos Martinez",
+  "email": "carlitos@example.com",
+  "password": "$2a$10$MH7YG2l1vP/rT7fvEQmg3OGkLHlOyN3eQTRSkA6wKiycmMs3GU3/2",
+  "image": "1714250177461_img.jpg",
+  "description": "Carlos Martinez es un apasionado de la tecnología y la innovación. Ha trabajado en numerosos proyectos exitosos y siempre está buscando aprender algo nuevo."
+ },
+ {
+  "id": 4,
+  "name": "ana Rodriguez",
+  "email": "anarodriguez@example.com",
+  "password": "$2a$10$fEoIWhO8oV9YYJH71hToEuabedATp1wgq9gtHTsFodTVXlG92/or.",
+  "image": "1714250215075_img.png",
+  "description": "Ana Rodriguez es una amante de los animales y defensora de los derechos de los animales. Siempre está buscando formas de ayudar a las criaturas indefensas de nuestro mundo."
+ },
+ {
+  "id": 5,
+  "name": "Pedro Picapiedras",
+  "email": "elpicapiedras@example.com",
+  "password": "$2a$10$1Qki5qnn.4IR//Yd9K3T.uYlPrLgGPtlUKi.tsZmYDmewDhGIjAtG",
+  "image": "1714250265144_img.jpg",
+  "description": "Pedro Picapiedras es un aventurero intrépido que disfruta explorando el mundo y descubriendo nuevas culturas. Siempre está listo para el próximo desafío emocionante."
+ },
+ {
+  "id": 6,
+  "name": "Hernando",
+  "email": "nando.parra.zapata@gmail.com",
+  "password": "$2a$10$gjFcCLo4BXE.tLqULTqTPu.C.6Go7zDcuXCvUSKKPSii93vrtRz8O",
+  "description": "hernando parra zapata",
+  "image": "1714541185541_img.jpg"
+ }
+]
