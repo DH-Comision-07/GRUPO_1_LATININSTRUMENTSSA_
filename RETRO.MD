@@ -63,5 +63,24 @@ Por el momento no descartamos ninguna practica, ya que seguimos explorando el tr
 
 - Postergar actividades, descubrimos que todo lleva un proceso y a veces puede ser más extenso de lo que creemos.
 
+- **Retro: 5° Sprint**
+
+- **Start Doing:**
+
+- Mejorar estilos, corregir imagenes y modularizar.
+
+- **More of:**  
+-Reuniones de avance y práctica para ayudarnos mutuamente.
+
+- **Keep Doing:** 
+-Comunicación fluida con el equipo y apoyo de los miembros con mas experiencia para despejar dudas al resto. Continuar implementando buenas prácticas.
+
+- **Less of:**  
+- Saltar dailys para avanzar. Hacerlas y avanzar juntos.
+
+
+- **Stop Doing:**  
+
+- Postergar actividades, descubrimos que todo lleva un proceso y a veces puede ser más extenso de lo que creemos.
 
 
