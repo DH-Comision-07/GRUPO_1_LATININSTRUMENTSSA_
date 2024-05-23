@@ -22,7 +22,16 @@ module.exports = (sequelize, DataTypes)=>{
 
 
     let CategoriaVinilo = sequelize.define(alias, cols, config);
-
+    CategoriaVinilo.associate = function(models){
+        
+    CategoriaVinilo.belongsToMany( models.Productos, {
+        as: 'productos', 
+        through: 'product_category_vinyl',
+        foreingKey: 'product_id ',
+        otherKey: 'category_vinyl_id', 
+        timeStamps: false
+    })
+    }
     return CategoriaVinilo;
 
 }

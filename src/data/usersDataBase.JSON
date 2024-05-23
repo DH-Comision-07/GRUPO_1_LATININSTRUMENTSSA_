@@ -46,5 +46,13 @@
   "password": "$2a$10$gjFcCLo4BXE.tLqULTqTPu.C.6Go7zDcuXCvUSKKPSii93vrtRz8O",
   "description": "hernando parra zapata",
   "image": "1714541185541_img.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Hernando",
+  "email": "hernando@email.com",
+  "password": "$2a$10$89x531YHfIyZjmC/AB8W2OSgNq8G1sHIP9HNNYEuDtFMmql/vKr7C",
+  "description": "hola",
+  "image": "1716252968402_img.jpg"
  }
 ]

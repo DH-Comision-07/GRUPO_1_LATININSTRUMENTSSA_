@@ -42,6 +42,36 @@ module.exports = (sequelize, DataTypes)=>{
 
     let Producto = sequelize.define(alias, cols, config);
 
+    Producto.associate = function(models){
+        Producto.belongsTo( models.Marcas, {
+            as:'marcas',
+            foreingKey: 'brand_id', 
+        })
+        Producto.belongsToMany( models.CatergoriaVinilos, {
+            as: 'vinilos', 
+            through: 'product_category_vinyl',
+            foreingKey: 'category_vinyl_id',
+            otherKey: 'product_id', 
+            timeStamps: false
+        })
+        Producto.belongsToMany( models.CatergoriaInstrumentos, {
+            as: 'instrumentos', 
+            through: 'product_category_instrument',
+            foreingKey: 'category_instrument_id',
+            otherKey: 'product_id', 
+            timeStamps: false
+        })
+        Producto.hasMany( models.Carritos, {
+            as:'carritos',
+            foreingKey: 'shopping_cart_id', 
+        })
+
+
+    }
+
+   
+
     return Producto;
 
 }
+
