@@ -36,11 +36,11 @@ module.exports = (sequelize, DataTypes)=>{
     let Carrito = sequelize.define(alias, cols, config);
         
     Carrito.associate = function(models){
-        Carrito.belongsTo( models.Producto, {
+        Carrito.belongsTo( models.Productos, {
             as:'producto',
             foreingKey: 'product_id', 
         })
-        Carrito.belongsTo( models.Usuario, {
+        Carrito.belongsTo( models.Usuarios, {
             as:'usuario',
             foreingKey: 'user_id', 
         })
