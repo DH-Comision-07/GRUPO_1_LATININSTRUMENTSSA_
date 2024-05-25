@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes)=>{
         })
         Producto.hasMany( models.Carritos, {
             as:'carritos',
-            foreingKey: 'shopping_cart_id', 
+            foreingKey: 'product_id', 
         })
 
 
