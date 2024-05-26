@@ -1,91 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<%- include('partials/head.ejs') %>
+		<link rel="stylesheet" href="/css/styleRegistro.css" />
+		<title>Registro</title>
+	</head>
+	<body>
+		<%- include ("partials/Header.ejs") %>
 
-<head>
-    <%- include('partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/styleRegistro.css">
-        <title>Registro</title>
-</head>
+		<div class="container-form">
+			<div class="titulo">
+				<h1>Registrarme</h1>
+			</div>
+			<div class="container-form">
+				<form action="register" method="POST" class="form" enctype="multipart/form-data">
+					<div class="form-section">
+						<label>
+							<input type="text" name="name" class="form-input" placeholder="Nombre de usuario" value="<%= locals.oldData ? locals.oldData.name : '' %>" />
+						</label>
+						<% if (locals.errors && locals.errors.name) { %>
+						<div class="text-danger" style="color: red"><%= locals.errors.name.msg %></div>
+						<% } %>
+					</div>
+					<div class="form-section">
+						<label>
+							<input type="email" name="email" class="form-input" placeholder="Email" value="<%= locals.oldData ? locals.oldData.email : '' %>" />
+						</label>
+						<% if (locals.errors && locals.errors.email) { %>
+						<div class="text-danger" style="color: red"><%= locals.errors.email.msg %></div>
+						<% } %>
+					</div>
+					<div class="form-section">
+						<label>
+							<input type="password" name="password" class="form-input" placeholder="Contraseña" />
+						</label>
+						<% if (locals.errors && locals.errors.password) { %>
+						<div class="text-danger" style="color: red"><%= locals.errors.password.msg %></div>
+						<% } %>
+					</div>
+					<div class="form-section">
+						<label>
+							<input type="password" name="confirm_password" class="form-input" placeholder="Repite Contraseña" />
+						</label>
+					</div>
+					<div>
+						<textarea name="description" id="description" class="in-descripcion" cols="30" rows="10" placeholder="Breve descripción"><%= locals.oldData ? locals.oldData.description : '' %></textarea>
+					</div>
+					<div class="form-section">
+						<label for="image" class="label-form">Imagen</label>
+						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
+						<% if (locals.errors && locals.errors.image) { %>
+						<div class="text-danger" style="color: red"><%= locals.errors.image.msg %></div>
+						<% } %>
+					</div>
 
-<body>
+					<div class="form-section">
+						<input type="submit" class="form-input-button" value="Registrarse" />
+					</div>
+					<br />
+					<div class="form-section">
+						<a href="#">
+							<p>¿Olvidó su contraseña?</p>
+						</a>
+						<br /><br />
+					</div>
+					<br /><br />
+					<div class="form-section">
+						<input type="submit" class="form-input-button" value="Ingreso con Google" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
 
-    <%- include ("partials/Header.ejs") %>
-
-        <div class="container-form">
-            <div class="titulo">
-                <h1>Registrarme</h1>
-            </div>
-            <div class="container-form">
-                <form action="register" method="POST" class="form" enctype="multipart/form-data">
-                    <div class="form-section">
-                        <label>
-                            <input type="text" name="name" class="form-input" placeholder="Nombre de usuario"
-                                value=<%=locals.oldData ? oldData.name : null %>
-                            >
-                        </label>
-                        <% if(locals.errors && errors.name) {%>
-                            <div class="text-danger" style="color: red">
-                                <%= errors.name.msg%>
-                            </div>
-                            <% } %>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="email" name="email" class="form-input" placeholder="Email"
-                                value=<%=locals.oldData ? oldData.email : null %>
-                            >
-                        </label>
-                        <% if(locals.errors && errors.email) {%>
-                            <div class="text-danger" style="color: red">
-                                <%= errors.email.msg%>
-                            </div>
-                            <% } %>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="password" name="password" class="form-input" placeholder="Constraseña">
-                        </label>
-                        <% if(locals.errors && errors.password) {%>
-                            <div class="text-danger" style="color: red">
-                                <%= errors.password.msg%>
-                            </div>
-                            <% } %>
-                    </div>
-                    <div class="form-section">
-                        <label>
-                            <input type="password" name="password" class="form-input" placeholder="Repite Contraseña">
-                        </label>
-                    </div>
-                    <div><textarea name="description" id="description" class="in-descripcion" cols="30" rows="10" placeholder="Breve descripción"></textarea>
-                    </div>
-                    <div class="form-section">
-                        <label for="image" class="label-form">Imagen</label>
-                        <input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
-                        <% if(locals.errors && errors.image) {%>
-                            <div class="text-danger" style="color: red">
-                                <%= errors.image.msg%>
-                            </div>
-                            <% } %>
-                    </div>
-
-                    <div class="form-section">
-                        <input type="submit" class="form-input-button" value="Registrarse">
-                    </div>
-                    <br>
-                    <div class="form-section"> <a href="#">
-                            <p>¿Olvidó su contraseña?
-                        </a> <br><br> </p>
-                    </div>
-                    <br> <br>
-                    <div class="form-section">
-                        <input type="submit" class="form-input-button" value="Ingreso con Google">
-                    </div>
-            </div>
-            </form>
-        </div>
-        </div>
-</body>
-
-<%- include ("partials/Footer.ejs") %>
-
+	<%- include ("partials/Footer.ejs") %>
 </html>
