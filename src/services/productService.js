@@ -1,12 +1,17 @@
 const fs = require("fs");
 const path = require("path");
-
+const db = require('../model/db/models')
 
 const productsPath = path.join(__dirname, "../data/productsDataBase.json");
 
 
 
 const productService = {
+  getAllProductsDb: ()=>{
+      productos = db.Productos.findAll()
+      return productos
+  },
+
   getAllProducts: () => {
     const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
     return products
