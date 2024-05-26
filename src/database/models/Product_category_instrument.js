@@ -1,7 +1,11 @@
-module.exports = (sequelize, DataTypes)=>{
+const db = require("../config/db.js");
+const { DataTypes } = require("sequelize");
 
-    let alias = 'CategoriaInstrumentos';
-    let cols = {
+
+const Product_category_instrument = db.define(
+    
+    product_category_instrument,
+    {
         id: {
             type: DataTypes.INTEGER, 
             autoIncrement: true, 
@@ -14,24 +18,19 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.STRING(100),
             
         },
-    };
-    let config = {
-        tableName: 'catergories_instruments',
-        
-    };
+    }
+)
 
-
-    let CategoriaInstrumento = sequelize.define(alias, cols, config);
-    CategoriaInstrumento.associate = function(models){
+Product_category_instrument.associate = function(models){
         
-    CategoriaInstrumento.belongsToMany( models.Productos, {
+    Product_category_instrument.belongsToMany( models.Productos, {
         as: 'productos', 
         through: 'product_category_instrument',
         foreingKey: 'product_id',
         otherKey: 'category_instrument_id', 
         timeStamps: false
     })
-    }
-    return CategoriaInstrumento;
+    };
 
-}
+
+module.exports = Product_category_instrument

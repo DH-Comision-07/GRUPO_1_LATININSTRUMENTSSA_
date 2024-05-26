@@ -1,15 +1,9 @@
-module.exports = (sequelize, DataTypes)=>{
+const { DataTypes } = require("sequelize");
+const db = require("../config/db.js");
 
-    let alias = 'Productos';
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER, 
-            autoIncrement: true, 
-            primaryKey: true,
-            alloNull: false,
-
-
-        }, 
+const Product = db.define(
+	"product",
+     {
         name: {
             type: DataTypes.STRING(100),
             alloNull: false, 
@@ -33,45 +27,36 @@ module.exports = (sequelize, DataTypes)=>{
                 key: 'id'
             }
         }
-    };
-    let config = {
-        tableName: 'products',
-        timeStamps: false
-    };
+    },
 
-
-    let Producto = sequelize.define(alias, cols, config);
-
-    Producto.associate = function(models){
-        Producto.belongsTo( models.Marcas, {
-            as:'marcas',
+);
+    Product.associate = function(models){
+        Product.belongsTo( models.Brand, {
+            as:'brands',
             foreingKey: 'brand_id', 
         })
-        Producto.belongsToMany( models.CatergoriaVinilos, {
-            as: 'vinilos', 
+        Product.belongsToMany( models.Product_category_vinyls, {
+            as: 'vinyls', 
             through: 'product_category_vinyl',
             foreingKey: 'category_vinyl_id',
             otherKey: 'product_id', 
             timeStamps: false
         })
-        Producto.belongsToMany( models.CatergoriaInstrumentos, {
-            as: 'instrumentos', 
+        Product.belongsToMany( models.Product_category_instruments, {
+            as: 'instruments', 
             through: 'product_category_instrument',
             foreingKey: 'category_instrument_id',
             otherKey: 'product_id', 
             timeStamps: false
         })
-        Producto.hasMany( models.Carritos, {
-            as:'carritos',
+        Product.hasMany( models.Carritos, {
+            as:'carts',
             foreingKey: 'product_id', 
         })
 
 
     }
 
-   
+   module.exports = Product
 
-    return Producto;
-
-}
 
