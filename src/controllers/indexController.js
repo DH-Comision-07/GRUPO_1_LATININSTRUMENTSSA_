@@ -1,8 +1,8 @@
 const productService = require("../services/productService");
 
 const indexController = {
-	home: function (req, res) {
-		const allProducts = productService.getAllProducts();
+	home: async function (req, res) {
+		const allProducts = await productService.getAllProducts();
 		res.render("home", {allProducts});
 	},
 

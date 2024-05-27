@@ -3,7 +3,7 @@ const productService = require("../services/productService");
 
 const productsController = {
 	list : (req, res)=> {
-		const productos= productService.list();
+		const productos= productService.getAllProducts();
 		
 	},
 	Detail: (req, res) => {

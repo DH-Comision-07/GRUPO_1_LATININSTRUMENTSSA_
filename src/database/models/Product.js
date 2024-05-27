@@ -1,9 +1,10 @@
 const { DataTypes } = require("sequelize");
 const db = require("../config/db.js");
+const brand = require('./Brand.js')
 
 const Product = db.define(
 	"product",
-     {
+    {
         name: {
             type: DataTypes.STRING(100),
             alloNull: false, 
@@ -57,6 +58,6 @@ const Product = db.define(
 
     }
 
-   module.exports = Product
+module.exports = Product
 
 
