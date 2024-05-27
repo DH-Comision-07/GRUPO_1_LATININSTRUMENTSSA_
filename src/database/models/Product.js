@@ -1,8 +1,9 @@
 const { DataTypes } = require("sequelize");
 const db = require("../config/db.js");
+const Brand = require("./Brand")
 
 const Product = db.define(
-	"product",
+	"products",
      {
         name: {
             type: DataTypes.STRING(100),
@@ -23,7 +24,7 @@ const Product = db.define(
         brand_id: { 
             type: DataTypes.INTEGER,
             references: { 
-                model: brand,
+                model: Brand,
                 key: 'id'
             }
         }
@@ -35,27 +36,27 @@ const Product = db.define(
             as:'brands',
             foreingKey: 'brand_id', 
         })
-        Product.belongsToMany( models.Product_category_vinyls, {
+        Product.belongsToMany( models.category_vinyl, {
             as: 'vinyls', 
             through: 'product_category_vinyl',
             foreingKey: 'category_vinyl_id',
             otherKey: 'product_id', 
             timeStamps: false
         })
-        Product.belongsToMany( models.Product_category_instruments, {
+        Product.belongsToMany( models.category_instrument, {
             as: 'instruments', 
             through: 'product_category_instrument',
             foreingKey: 'category_instrument_id',
             otherKey: 'product_id', 
             timeStamps: false
         })
-        Product.hasMany( models.Carritos, {
+        Product.hasMany( models.Shopping_cart, {
             as:'carts',
             foreingKey: 'product_id', 
         })
 
 
-    }
+    };
 
    module.exports = Product
 
