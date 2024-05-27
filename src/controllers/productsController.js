@@ -2,6 +2,7 @@ const { name } = require("ejs");
 const productService = require("../services/productService");
 
 const productsController = {
+  
 	Detail: (req, res) => {
 		const productId = req.params.id;
 		const product = productService.getProductsById(productId);
