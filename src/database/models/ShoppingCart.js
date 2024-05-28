@@ -1,40 +1,36 @@
-const db = require("../config/db.js");
 const { DataTypes } = require("sequelize");
+const db = require("../config/db.js");
+const User = require("./User.js");
+const Product = require("./Product.js");
 
-const Shopping_cart = db.define(
-
-    "shopping_cart",
-    {
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: Usuario,
-                key: 'id'
-            }
-        },
-        product_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: Producto,
-                key: 'id'
-            }
-        },
-        quantity: DataTypes.INTEGER,
-    },
-
-    Shopping_cart.associate = function (models) {
-        Shopping_cart.belongsTo(models.Products, {
-            as: 'product',
-            foreingKey: 'product_id',
-        })
-        Shopping_cart.belongsTo(models.Users, {
-            as: 'usuario',
-            foreingKey: 'user_id',
-        })
-
-
-
-    }
-
+const ShoppingCart = db.define(
+	"shopping_cart",
+	{
+		user_id: {
+			type: DataTypes.INTEGER,
+			references: {
+				model: User,
+				key: "id",
+			},
+		},
+		product_id: {
+			type: DataTypes.INTEGER,
+			references: {
+				model: Product,
+				key: "id",
+			},
+		},
+		quantity: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+	},
+	{
+		timestamps: false,
+	}
 );
-module.exports = Shopping_cart;
+
+ShoppingCart.belongsTo(User, { foreignKey: "user_id" });
+ShoppingCart.belongsTo(Product, { foreignKey: "product_id" });
+
+module.exports = ShoppingCart;
