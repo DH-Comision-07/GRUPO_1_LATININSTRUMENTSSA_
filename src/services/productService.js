@@ -1,20 +1,27 @@
 const fs = require("fs");
 const path = require("path");
-const db = require('../model/db/models')
+const db = require('../database/models/Product')
 
-const productsPath = path.join(__dirname, "../data/productsDataBase.json");
+// const productsPath = path.join(__dirname, "../data/productsDataBase.json");
 
 
 
 const productService = {
-  getAllProductsDb: ()=>{
-      productos = db.Productos.findAll()
-      return productos
-  },
+  // getAllProductsDb: ()=>{
+  //     const productos = db.Productos.findAll()
+  //     return productos
+  // },
 
-  getAllProducts: () => {
-    const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
-    return products
+
+   getAllProducts: async () => {
+    try {
+      const allProducts = await db.findAll();
+      const simplifiedProducts = allProducts.map(product => product.dataValues);
+      return simplifiedProducts;
+    } catch (error) {
+      console.error("Error al obtener todos los productos:", error);
+      throw error;
+    }
   },
 
   getProductsById: (productId) => {
