@@ -58,6 +58,6 @@ const Product = db.define(
 
     };
 
-   module.exports = Product
+module.exports = Product
 
 
