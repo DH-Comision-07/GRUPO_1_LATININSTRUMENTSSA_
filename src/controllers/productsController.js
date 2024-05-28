@@ -6,9 +6,9 @@ const productsController = {
 		const productos= productService.getAllProducts();
 		
 	},
-	Detail: (req, res) => {
+	Detail: async (req, res) => {
 		const productId = req.params.id;
-		const product = productService.getProductsById(productId);
+		const product = await productService.getProductsById(productId);
 		if (product) {
 			res.render("productDetail", { product });
 		} else {
@@ -20,9 +20,10 @@ const productsController = {
 		res.render("productCreate");
 	},
 
-	Store: (req, res) => {
+	Store: async (req, res) => {
+		try{
 		const newProduct = {
-			id: productService.getNextId(),
+			
 			name: req.body.name,
 			brand: req.body.brand,
 			description: req.body.description,
@@ -30,8 +31,12 @@ const productsController = {
 			price: parseInt(req.body.price),
 			image: req.file ? req.file.filename : "",
 		};
-		productService.createProduct(newProduct);
+		await productService.createProduct(newProduct);
 		res.redirect("/");
+	} catch(error) {
+		console.error('Error during product creation:', error);
+		res.status(500).send('Error interno del servidor');
+	}
 	},
 
 	Edit: (req, res) => {
