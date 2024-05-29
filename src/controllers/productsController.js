@@ -18,10 +18,10 @@ const productsController = {
 	Store: async (req, res) => {
 		const newProduct = {
 			name: req.body.name,
-			brand_id: req.body.brand, // Asumiendo que el campo brand es una referencia a la tabla Brand
+			brand_id: req.body.brand, 
 			description: req.body.description,
 			category: req.body.category,
-			price: parseFloat(req.body.price), // Cambié a parseFloat para que coincida con el tipo DECIMAL de Sequelize
+			price: parseFloat(req.body.price), 
 			image: req.file ? req.file.filename : "",
 		};
 		await productService.createProduct(newProduct);

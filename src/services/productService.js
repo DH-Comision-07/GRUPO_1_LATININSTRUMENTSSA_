@@ -9,14 +9,6 @@ const productService = {
 		return await Product.findByPk(productId);
 	},
 
-	getNextId: async () => {
-		const products = await productService.getAllProducts();
-		const maxId = products.reduce((acc, current) => {
-			return acc > current.id ? acc : current.id;
-		}, 0);
-		return maxId + 1;
-	},
-
 	createProduct: async (newProduct) => {
 		return await Product.create(newProduct);
 	},
