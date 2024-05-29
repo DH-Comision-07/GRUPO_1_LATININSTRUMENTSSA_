@@ -5,12 +5,16 @@ const productsRoutes = require("./src/routes/productsRoutes.js");
 const session = require('express-session');
 const userLoggedMidd = require('./src/middlewares/userLoggedMidd');
 const cookies = require('cookie-parser');
+const bodyParser = require("body-parser");
 
 const app = express();
 
 
 
-const methodOverride = require ('method-override');
+const methodOverride = require('method-override');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 app.use(session({

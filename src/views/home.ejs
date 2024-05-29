@@ -12,18 +12,18 @@
 					<h1 class="titulo">Promociones</h1>
 					<ul class="promos__lista">
             <% allProducts.forEach(product => { %>
-              <li class="promo__contenedor">
+            <li class="promo__contenedor">
                 <div class="promo">
-                  <div class="promo__imagen"><img src="img/products/<%= product.image %>" /></div>
-                  <div class="promo__contenido">
+                    <div class="promo__imagen"><img src="img/products/<%= product.image %>" /></div>
+                    <div class="promo__contenido">
                     <h2 class="promo__titulo"><%= product.name %></h2>
                     <p class="promo__texto"><%= product.description %></p>
                     <div class="boton">
-                      <a class="btn promo__btn" href="/product/detail/<%= product.id %>">Ver producto</a>
+                        <a class="btn promo__btn" href="/product/detail/<%= product.id %>">Ver producto</a>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              </li>
+            </li>
             <% }) %>
 					</ul>
 				</div>
