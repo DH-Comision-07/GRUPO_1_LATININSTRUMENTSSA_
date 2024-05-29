@@ -1,11 +1,6 @@
-const { name } = require("ejs");
 const productService = require("../services/productService");
 
 const productsController = {
-	list : (req, res)=> {
-		const productos= productService.getAllProducts();
-		
-	},
 	Detail: async (req, res) => {
 		const productId = req.params.id;
 		const product = await productService.getProductsById(productId);
@@ -21,51 +16,46 @@ const productsController = {
 	},
 
 	Store: async (req, res) => {
-		try{
 		const newProduct = {
-			
 			name: req.body.name,
-			brand: req.body.brand,
+			brand_id: req.body.brand, 
 			description: req.body.description,
 			category: req.body.category,
-			price: parseInt(req.body.price),
+			price: parseFloat(req.body.price), 
 			image: req.file ? req.file.filename : "",
 		};
 		await productService.createProduct(newProduct);
 		res.redirect("/");
-	} catch(error) {
-		console.error('Error during product creation:', error);
-		res.status(500).send('Error interno del servidor');
-	}
 	},
 
 	Edit: async (req, res) => {
 		const productId = parseInt(req.params.id);
 		const product = await productService.getProductsById(productId);
 		if (!product) {
-		  return res.status(404).send("Producto no encontrado");
+		    return res.status(404).send("Producto no encontrado");
 		}
 		res.render("productEdit", { product });
-	  },
-	
-	  Update: async (req, res) => {
+	},
+
+	Update: async (req, res) => {
 		const productId = req.params.id;
 		const updatedProduct = {
-		  name: req.body.name,
-		  brand: req.body.brand,
-		  description: req.body.description,
-		  category: req.body.category,
-		  price: parseInt(req.body.price),
-		  image: req.file ? req.file.filename : "",
+			name: req.body.name,
+			brand_id: req.body.brand, // Asumiendo que el campo brand es una referencia a la tabla Brand
+			description: req.body.description,
+			category: req.body.category,
+			price: parseFloat(req.body.price), // Cambié a parseFloat para que coincida con el tipo DECIMAL de Sequelize
+			image: req.file ? req.file.filename : "",
 		};
 		await productService.updateProduct(productId, updatedProduct);
 		res.redirect(`/product/detail/${productId}`);
-	  },
-Delete: (req,res)=> {
-	const productId = req.params.id;
-	productService.deleteProduct(productId);
-	res.redirect('/')
-	}
+	},
+
+	Delete: async (req, res) => {
+		const productId = req.params.id;
+		await productService.deleteProduct(productId);
+		res.redirect("/");
+	},
 };
 
 module.exports = productsController;
