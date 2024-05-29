@@ -24,28 +24,28 @@ const productService = {
     }
   },
 
-  getProductsById: (productId) => {
-    const products = productService.getAllProducts();
-    return products.find((product) => product.id == productId);
+  getProductsById: async (productId) => {
+    try {
+      const products = await db.findByPk(productId);
+      return products;
+    } catch (error) {
+      console.error("Error al obtener producto:", error);
+      throw error;                              
+    }
+
   },
 
-  getNextId: () => {
-    const products = productService.getAllProducts();
-    const maxId = products.reduce((acc, current) => {
-      return acc > current.id ? acc : current.id;
-    }, 0);
-    return maxId + 1;
-  },
 
-  createProduct: (newProduct) => {
-    const products = productService.getAllProducts();
-    const maxId = products.reduce((acc, current) => {
-      return acc > current.id ? acc : current.id;
-    }, 0);
+  createProduct: async (newProduct) => {
+    // const products = productService.getAllProducts();
+    // const maxId = products.reduce((acc, current) => {
+    //   return acc > current.id ? acc : current.id;
+    // }, 0);
 
-    newProduct.id = maxId + 1;
-    products.push(newProduct);
-    fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8")
+    // newProduct.id = maxId + 1;
+    // products.push(newProduct);
+    // fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8")
+
   },
 
   updateProduct: (productId, updatedProduct) => {

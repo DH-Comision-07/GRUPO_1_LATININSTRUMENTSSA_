@@ -6,9 +6,9 @@ const productsController = {
 		const productos= productService.getAllProducts();
 		
 	},
-	Detail: (req, res) => {
+	Detail: async (req, res) => {
 		const productId = req.params.id;
-		const product = productService.getProductsById(productId);
+		const product = await productService.getProductsById(productId);
 		if (product) {
 			res.render("productDetail", { product });
 		} else {
@@ -20,17 +20,9 @@ const productsController = {
 		res.render("productCreate");
 	},
 
-	Store: (req, res) => {
-		const newProduct = {
-			id: productService.getNextId(),
-			name: req.body.name,
-			brand: req.body.brand,
-			description: req.body.description,
-			category: req.body.category,
-			price: parseInt(req.body.price),
-			image: req.file ? req.file.filename : "",
-		};
-		productService.createProduct(newProduct);
+	Store: async (req, res) => {
+		const newProduct = req.body;
+		await productService.createProduct(newProduct);
 		res.redirect("/");
 	},
 
