@@ -2,8 +2,13 @@ const productService = require("../services/productService");
 
 const indexController = {
 	home: async function (req, res) {
-		const allProducts = await productService.getAllProducts();
-		res.render("home", {allProducts});
+		try {
+			const allProducts = await productService.getAllProducts();
+			res.render("home", { allProducts });
+		} catch (error) {
+			console.error("Error fetching products:", error);
+			res.status(500).send("Error fetching products");
+		}
 	},
 
 	carrito: function (req, res) {
@@ -13,18 +18,36 @@ const indexController = {
 	nosotros: function (req, res) {
 		res.render("nosotros");
 	},
-	instrumentos: function(req, res){
-		const productByCategory = productService.productByCategory("instrumento");
-		res.render("instrumentos", {productByCategory});
+
+	instrumentos: async function (req, res) {
+		try {
+			const productByCategory = await productService.productByCategory("instrumento");
+			res.render("instrumentos", { productByCategory });
+		} catch (error) {
+			console.error("Error fetching instruments:", error);
+			res.status(500).send("Error fetching instruments");
+		}
 	},
-	vinilos: function(req, res){
-		const productByCategory = productService.productByCategory("vinilo");
-		res.render("vinilos", {productByCategory});
+
+	vinilos: async function (req, res) {
+		try {
+			const productByCategory = await productService.productByCategory("vinilo");
+			res.render("vinilos", { productByCategory });
+		} catch (error) {
+			console.error("Error fetching vinyls:", error);
+			res.status(500).send("Error fetching vinyls");
+		}
 	},
-	accesorios: function(req, res){
-		const productByCategory = productService.productByCategory("accesorio");
-		res.render("accesorios", {productByCategory});
-	}
+
+	accesorios: async function (req, res) {
+		try {
+			const productByCategory = await productService.productByCategory("accesorio");
+			res.render("accesorios", { productByCategory });
+		} catch (error) {
+			console.error("Error fetching accessories:", error);
+			res.status(500).send("Error fetching accessories");
+		}
+	},
 };
 
 module.exports = indexController;
