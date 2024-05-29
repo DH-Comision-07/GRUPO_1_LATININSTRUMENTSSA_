@@ -51,23 +51,22 @@ const productService = {
       throw error;
     }
   },
-
-  updateProduct: (productId, updatedProduct) => {
-		const products = productService.getAllProducts();
-    console.log(productId);
-    console.log(updatedProduct);
-		const productIndex = products.findIndex((product) => product.id == productId);
-
-		if (productIndex !== -1) {
-      console.log('image' + updatedProduct.image);
-      if(updatedProduct.image ===""){
-        console.log('entro al if');
-        updatedProduct.image = products[productIndex].image;
+  updateProduct: async (productId, updatedProduct) => {
+    const product = await Product.findByPk(productId);
+    if (product) {
+      if (!updatedProduct.image) {
+        updatedProduct.image = product.image;
       }
-      
-			products[productIndex] = { ...products[productIndex], ...updatedProduct };
-      fs.writeFileSync(productsPath, JSON.stringify(products, null, 2), "utf-8");
+      await product.update(updatedProduct);
     }
+  },
+  
+  getAllProducts: async () => {
+    return await Product.findAll();
+  },
+
+  getProductsById: async (productId) => {
+    return await Product.findByPk(productId);
   },
 
   deleteProduct : function (id) {
