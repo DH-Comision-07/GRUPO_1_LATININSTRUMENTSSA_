@@ -3,7 +3,6 @@ const multerMidd = require("../middlewares/multerMidd");
 const productsController = require("../controllers/productsController");
 const router = express.Router();
 
-router.get('/productos', productsController.list )
 router.get("/detail/:id", productsController.Detail);
 router.get("/create", productsController.Create);
 router.post("/create", multerMidd.upload.single("image"), productsController.Store);
