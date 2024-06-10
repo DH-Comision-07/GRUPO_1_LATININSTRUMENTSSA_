@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
 
     let formulario = document.querySelector('.form');
 
@@ -39,6 +39,8 @@ window.addEventListener('load', function () {
             e.preventDefault();
 
             let ulFails = document.querySelector("div.fails ul");
+
+            ulFails.innerHTML = "";
 
             for (let i = 0; i < fails.length; i++) {
                 ulFails.innerHTML += "<li>" + fails[i] + "</li>"
