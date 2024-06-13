@@ -16,10 +16,15 @@
                 <h1 class="titulo">Inicio de Sesión</h1>
             </div>
             <div class="container-form">
-                <form action="login" method="POST" class="form">
+                <form action="login" method="POST" class="form login">
                     <div class="form-section">
+                        <div class="errores">
+                            <ul>
+                                
+                            </ul>
+                        </div>
                         <label>
-                            <input type="text" name="name" class="form-input" placeholder="Nombre de usuario">
+                            <input type="text" name="name" class="form-input name" placeholder="Nombre de usuario">
                         </label>
                         <% if(locals.errors && errors.name) {%>
                             <div class="text-danger" style="color: red">
@@ -29,7 +34,7 @@
                     </div>
                     <div class="form-section">
                         <label>
-                            <input type="password" name="password" class="form-input" placeholder="Contraseña">
+                            <input type="password" name="password" class="form-input pass" placeholder="Contraseña">
                         </label>
                         <% if(locals.errors && errors.password) {%>
                             <div class="text-danger" style="color: red">
