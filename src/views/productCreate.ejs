@@ -9,11 +9,14 @@
 		<%- include ("partials/Header.ejs") %>
 		<main class="main-edit">
 			<article class="container-form">
+			    <div class="fails">
+					<ul></ul>
+			    </div>
 				<form class="product-edit" action="/product/create" method="POST" enctype="multipart/form-data">
 					<h2 class="titulo-editando">Crear Artículo</h2>
 					<div class="container-input">
 						<label for="image" class="label-form">Imagen</label>
-						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" required />
+						<input id="image" name="image" type="file" class="form-input-img" accept=".jpg, .png, .jpeg" />
 					</div>
 					<div class="container-input">
 						<label for="name" class="label-form">Nombre</label>
@@ -21,7 +24,7 @@
 					</div>
 					<div class="container-input">
 						<label for="brand" class="label-form">Marca</label>
-						<input id="brand" name="brand" class="in-marca" type="text" class="form-input" placeholder="Marca" required />
+						<input id="brand" name="brand" class="in-marca" type="text" class="form-input" placeholder="Marca"  />
 					</div>
 					<div class="container-input">
 						<label for="description" class="label-form">Descripción</label>
@@ -44,5 +47,6 @@
 				</form>
 			</article>
 		</main>
+		<script src="../../public/scripts/prodCreateValidationFront.js" type="text/javascript"></script>
 	</body>
 </html>
