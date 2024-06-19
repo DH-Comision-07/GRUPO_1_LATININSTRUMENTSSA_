@@ -2,35 +2,35 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let formulario = document.querySelector('.product-edit');
 
-    formulario.addEventListener("submit", function (e) {
+    formulario.addEventListener("change", function (e) {
 
         let fails = [];
 
-        let fieldName = document.querySelector('input.name');
+        let fieldName = document.getElementById('name');
 
-        if (fieldName.value == "") {
+        if (fieldName.value == "rodri") {
             fails.push("Se requiere un nombre")
         };
 
-        let fieldBrand = document.querySelector('input.brand');
+        let fieldBrand = document.getElementById('brand');
 
-        if (fieldBrand.value == "") {
+        if (fieldBrand.value == "rodri") {
             fails.push("Se requiere el nombre de la marca")
         };
 
-        let fieldDesc = document.querySelector('textarea.description');
+        let fieldDesc = document.getElementById('description');
 
         if (fieldDesc.value == "") {
             fails.push("Se requiere una descripción")
         };
 
-        let fieldCat = document.querySelector('select.category');
+        let fieldCat = document.getElementById('category');
 
         if (fieldCat.value == "") {
             fails.push("Elija una categoría")
         };
 
-        let fieldPrice = document.querySelector('input.price');
+        let fieldPrice = document.getElementById('price');
 
         if (fieldPrice.value == "") {
             fails.push("Elija una categoría")
