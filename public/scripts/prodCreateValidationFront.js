@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-    let formulario = document.querySelector('.form');
+    let formulario = document.querySelector('.product-edit');
 
     formulario.addEventListener("submit", function (e) {
 
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
             fails.push("Se requiere el nombre de la marca")
         };
 
-        let fieldDesc = document.querySelector('input.description');
+        let fieldDesc = document.querySelector('textarea.description');
 
         if (fieldDesc.value == "") {
             fails.push("Se requiere una descripción")
