@@ -4,27 +4,27 @@ window.addEventListener('DOMContentLoaded', function () {
     formulario.addEventListener("submit", function (e) {
         let fails = [];
 
-        let fieldName = document.querySelector('input.in-nombre');
+        let fieldName = document.querySelector('.in-nombre');
         if (fieldName.value == "") {
             fails.push("Se requiere un nombre");
         }
 
-        let fieldBrand = document.querySelector('input.in-marca');
+        let fieldBrand = document.querySelector('.in-marca');
         if (fieldBrand.value == "") {
             fails.push("Se requiere el nombre de la marca");
         }
 
-        let fieldDesc = document.querySelector('textarea.in-descripcion');
+        let fieldDesc = document.querySelector('.in-descripcion');
         if (fieldDesc.value == "") {
             fails.push("Se requiere una descripción");
         }
 
-        let fieldCat = document.querySelector('select.select-categoria');
+        let fieldCat = document.querySelector('.select-categoria');
         if (fieldCat.value == "") {
             fails.push("Elija una categoría");
         }
 
-        let fieldPrice = document.querySelector('input.in-precio');
+        let fieldPrice = document.querySelector('.in-precio');
         if (fieldPrice.value == "") {
             fails.push("Se requiere un precio");
         }
