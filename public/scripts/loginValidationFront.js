@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let formulario = document.querySelector('.form');
 
-    formulario.addEventListener("change", function (e) {
+    formulario.addEventListener("submit", function (e) {
 
         let errores = [];
 

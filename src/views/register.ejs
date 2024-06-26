@@ -20,7 +20,7 @@
 				<form action="register" method="POST" class="form" enctype="multipart/form-data">
 					<div class="form-section">
 						<label>
-							<input type="text" name="name" class="form-input name" placeholder="Nombre de usuario" value="<%= locals.oldData ? locals.oldData.name : '' %>" />
+							<input type="text" name="name" class="form-input name" id="name" placeholder="Nombre de usuario" value="<%= locals.oldData ? locals.oldData.name : '' %>" />
 						</label>
 						<% if (locals.errors && locals.errors.name) { %>
 						<div class="text-danger" style="color: red"><%= locals.errors.name.msg %></div>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 
-		<script src="../../public/scripts/registerValidationFront.js" type="text/javascript"></script>
+		<script src="/scripts/registerValidationFront.js" type="text/javascript"></script>
 	</body>
 
 	<%- include ("partials/Footer.ejs") %>
