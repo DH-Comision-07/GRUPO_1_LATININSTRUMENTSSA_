@@ -13,10 +13,14 @@
 				<h1>Registrarme</h1>
 			</div>
 			<div class="container-form">
+				<div class="fails">
+                      <ul></ul>
+				</div>
+
 				<form action="register" method="POST" class="form" enctype="multipart/form-data">
 					<div class="form-section">
 						<label>
-							<input type="text" name="name" class="form-input" placeholder="Nombre de usuario" value="<%= locals.oldData ? locals.oldData.name : '' %>" />
+							<input type="text" name="name" class="form-input name" id="name" placeholder="Nombre de usuario" value="<%= locals.oldData ? locals.oldData.name : '' %>" />
 						</label>
 						<% if (locals.errors && locals.errors.name) { %>
 						<div class="text-danger" style="color: red"><%= locals.errors.name.msg %></div>
@@ -24,7 +28,7 @@
 					</div>
 					<div class="form-section">
 						<label>
-							<input type="email" name="email" class="form-input" placeholder="Email" value="<%= locals.oldData ? locals.oldData.email : '' %>" />
+							<input type="email" name="email" class="form-input email" placeholder="Email" value="<%= locals.oldData ? locals.oldData.email : '' %>" />
 						</label>
 						<% if (locals.errors && locals.errors.email) { %>
 						<div class="text-danger" style="color: red"><%= locals.errors.email.msg %></div>
@@ -32,7 +36,7 @@
 					</div>
 					<div class="form-section">
 						<label>
-							<input type="password" name="password" class="form-input" placeholder="Contraseña" />
+							<input type="password" name="password" class="form-input pass" placeholder="Contraseña" />
 						</label>
 						<% if (locals.errors && locals.errors.password) { %>
 						<div class="text-danger" style="color: red"><%= locals.errors.password.msg %></div>
@@ -40,7 +44,7 @@
 					</div>
 					<div class="form-section">
 						<label>
-							<input type="password" name="confirm_password" class="form-input" placeholder="Repite Contraseña" />
+							<input type="password" name="confirm_password" class="form-input repass" placeholder="Repite Contraseña" />
 						</label>
 					</div>
 					<div>
@@ -71,6 +75,8 @@
 				</form>
 			</div>
 		</div>
+
+		<script src="/scripts/registerValidationFront.js" type="text/javascript"></script>
 	</body>
 
 	<%- include ("partials/Footer.ejs") %>
