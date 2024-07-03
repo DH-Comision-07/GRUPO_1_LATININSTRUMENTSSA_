@@ -2,7 +2,7 @@ const Product = require("../database/models/Product");
 
 const productService = {
 	getAllProducts: async () => {
-		return await Product.findAll();
+		return await Product.findAll({limit:6});
 	},
 
 	getProductsById: async (productId) => {
