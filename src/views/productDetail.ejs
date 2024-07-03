@@ -30,7 +30,9 @@
 					<button class="seguir">SEGUIR COMPRANDO</button>
 					<br />
 					<br />
+					<% if(locals.isLogged){ %>
 					<button class="seguir"><a class="seguir" href="/product/edit/<%= product.id %>">EDITAR PRODUCTO</a></button>
+					<%  }%>
 				</div>
 				<br />
 				<br />
