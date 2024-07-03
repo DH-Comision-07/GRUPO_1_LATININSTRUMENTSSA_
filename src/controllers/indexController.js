@@ -21,7 +21,7 @@ const indexController = {
 
 	instrumentos: async function (req, res) {
 		try {
-			const productByCategory = await productService.productByCategory("instrumento");
+			const productByCategory = await productService.productByCategory("instrument");
 			res.render("instrumentos", { productByCategory });
 		} catch (error) {
 			console.error("Error fetching instruments:", error);
@@ -31,23 +31,15 @@ const indexController = {
 
 	vinilos: async function (req, res) {
 		try {
-			const productByCategory = await productService.productByCategory("vinilo");
+			const productByCategory = await productService.productByCategory("vinyl");
 			res.render("vinilos", { productByCategory });
 		} catch (error) {
 			console.error("Error fetching vinyls:", error);
 			res.status(500).send("Error fetching vinyls");
 		}
-	},
+	}
 
-	accesorios: async function (req, res) {
-		try {
-			const productByCategory = await productService.productByCategory("accesorio");
-			res.render("accesorios", { productByCategory });
-		} catch (error) {
-			console.error("Error fetching accessories:", error);
-			res.status(500).send("Error fetching accessories");
-		}
-	},
+
 };
 
 module.exports = indexController;
